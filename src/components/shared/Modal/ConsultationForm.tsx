@@ -282,7 +282,10 @@ export const ConsultationForm = ({ notificationHandler }: FormInModalProps) => {
           </div>
 
           <div className="flex justify-center tab:justify-end tab:w-1/2">
-            <Button disabled={status === "Завантаження..." ? true : false} />
+            <Button
+              submit
+              disabled={status === "Завантаження..." ? true : false}
+            />
           </div>
         </div>
       </form>

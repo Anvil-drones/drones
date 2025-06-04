@@ -1,18 +1,20 @@
 import { useTranslations } from "next-intl";
 
 export const Button = ({
+  submit,
   disabled,
   joinUs,
   notFound,
   onClick,
 }: {
+  submit?: boolean;
   disabled?: boolean;
   joinUs?: boolean;
   notFound?: boolean;
   onClick?: () => void;
 }) => {
   const t = useTranslations("Buttons");
-  const text = joinUs ? t("joinUs") : t("callUs");
+  const text = joinUs ? t("joinUs") : submit ? t("submit") : t("callUs");
 
   return (
     <div className="relative w-[288px] h-12 tab:h-[56px] group bg-blackCustom">
