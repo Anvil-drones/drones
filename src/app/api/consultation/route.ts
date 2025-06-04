@@ -10,7 +10,7 @@ const RANGE = "Аркуш1!A2:G2";
 export async function POST(request: NextRequest) {
   const { name, organization, email, phone, comment, fileUrl } =
     await request.json();
-  const date = new Date().toLocaleString();
+  const date = new Date().toLocaleString("uk-UA", { timeZone: "Europe/Kyiv" });
 
   if (request.method === "POST") {
     try {
