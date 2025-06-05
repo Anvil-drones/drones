@@ -29,6 +29,7 @@ export const VacancyForm = ({ notificationHandler }: FormInModalProps) => {
     message: "",
   });
   const t = useTranslations("HomePage");
+  const tButton = useTranslations("Buttons");
   const validate = () => {
     const newErrors: typeof errors = { name: "", email: "", message: "" };
     let valid = true;
@@ -184,7 +185,7 @@ export const VacancyForm = ({ notificationHandler }: FormInModalProps) => {
       </div>
 
       <div className="flex justify-center tab:mt-[53px] pc:mt-[72px] tab:justify-start">
-        <Button joinUs />
+        <Button text={tButton("joinUs")} joinUs />
       </div>
     </form>
   );

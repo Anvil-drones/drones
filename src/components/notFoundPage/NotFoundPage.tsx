@@ -9,6 +9,8 @@ import Typewriter from "../shared/Typewriter";
 
 export const NotFoundPage = () => {
   const t = useTranslations("HomePage");
+  const tButton = useTranslations("Buttons");
+
   const text = t("notFound");
   const router = useRouter();
   return (
@@ -27,7 +29,11 @@ export const NotFoundPage = () => {
           <Typewriter textDef={text} />
         </div>
         <div className="absolute z-[1] top-[65vh] tab:top-[calc(50vh+16px)] pc:top-[calc(50vh+24px)] left-1/2 tab:left-[calc(50%+16px)] pc:left-[calc(50%+24px)] -translate-x-1/2 tab:translate-x-0 -translate-y-1/2">
-          <Button notFound joinUs onClick={() => router.push("/")} />
+          <Button
+            text={tButton("goHome")}
+            joinUs
+            onClick={() => router.push("/")}
+          />
         </div>
       </div>
       <DecorGrid notFound />
