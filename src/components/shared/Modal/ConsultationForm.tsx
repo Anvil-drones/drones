@@ -34,6 +34,8 @@ export const ConsultationForm = ({ notificationHandler }: FormInModalProps) => {
     email: "",
   });
   const t = useTranslations("HomePage");
+  const tButton = useTranslations("Buttons");
+
   const validate = () => {
     const newErrors: typeof errors = { name: "", email: "" };
     let valid = true;
@@ -283,6 +285,7 @@ export const ConsultationForm = ({ notificationHandler }: FormInModalProps) => {
 
           <div className="flex justify-center tab:justify-end tab:w-1/2">
             <Button
+              text={tButton("submit")}
               submit
               disabled={status === "Завантаження..." ? true : false}
             />

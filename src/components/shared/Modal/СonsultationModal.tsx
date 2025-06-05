@@ -1,4 +1,5 @@
 "use client";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 import { SubmitFnType } from "@/types/modalProps";
@@ -13,6 +14,7 @@ export const ConsultationModal = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [isErrorModalOpen, setIsErrorModalOpen] = useState(false);
+  const tButton = useTranslations("Buttons");
 
   const handleClose = () => {
     setIsOpen(false);
@@ -35,7 +37,7 @@ export const ConsultationModal = () => {
 
   return (
     <>
-      <Button onClick={() => setIsOpen(true)} />
+      <Button text={tButton("callUs")} onClick={() => setIsOpen(true)} />
 
       <Modal isOpen={isOpen} onClose={handleClose}>
         {isSuccess ? (

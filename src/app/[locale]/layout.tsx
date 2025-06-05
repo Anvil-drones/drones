@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations } from "next-intl/server";
 
+import { CookiesComponent } from "@/components/Cookies";
 import { Header } from "@/components/Header/Header";
 import { routing } from "@/i18n/routing";
 
@@ -86,6 +87,7 @@ export default async function RootLayout({
         <NextIntlClientProvider>
           <Header />
           <main>{children}</main>
+          <CookiesComponent />
         </NextIntlClientProvider>
       </body>
     </html>

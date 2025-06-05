@@ -44,7 +44,7 @@
     "specList1Item2": "FPV drones as transmitters",
     "specList1Item3": "FPV bomber drones",
     "specList1Item4": "FPV surveillance drones",
-    "specList1Item5": "FPV drones with TV cameras",
+    "specList1Item5": "FPV drones with thermal imaging camera",
     "specializationItemTitle2": "UAV production",
     "specializationItemDescription2": "Unmanned airplane drone for reconnaissance, strike operations, FPV drone support, and special missions.",
     "specList2Item1": "Surveillance airplane drone",
@@ -118,6 +118,12 @@
     "callUs": "make an order",
     "joinUs": "Join the team",
     "goHome": "return to home page",
-    "submit": "send"
+    "submit": "send",
+    "accept": "accept",
+    "reject": "reject"
+  },
+  "Cookies": {
+    "title": "We use cookies",
+    "text": "These files help us improve the website and its content. <link>Learn more here</link>"
   }
 }
