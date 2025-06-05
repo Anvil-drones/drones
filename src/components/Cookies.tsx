@@ -42,9 +42,9 @@ export const CookiesComponent = () => {
     <div
       className={`${
         isVisible ? "h-[363px]" : "h-0"
-      } bg-blackCustom w-full max-w-[388px] transition-[height] duration-[1000ms] overflow-hidden fixed z-[11] bottom-12 right-1/2 translate-x-1/2 tab:right-12 tab:translate-x-0 border border-accent `}
+      } bg-blackCustom w-full max-w-[388px] transition-[height] duration-[1000ms] overflow-hidden fixed z-[11] bottom-12 right-1/2 translate-x-1/2 tab:right-12 tab:translate-x-0 `}
     >
-      <div className=" relative p-4 tab:p-12 flex flex-col items-center justify-center mx-auto">
+      <div className=" relative p-4 tab:p-12 flex flex-col items-center justify-center mx-auto border border-accent ">
         <div className="ml-0 mr-auto mt-8 tab:mt-0 mb-2">
           <IconCookies />
         </div>
