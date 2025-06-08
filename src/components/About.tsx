@@ -52,7 +52,7 @@ export const About = () => {
             </p>
           </div>
 
-          <div className="flex-1 flex items-center justify-center mt-10">
+          <div className="flex-1 flex items-center justify-center mt-16 pc:mt-36">
             <div className="relative w-full tab:max-w-[550px] pc:max-w-[748px]  aspect-[288/170] tab:aspect-[258/170] pc:aspect-[220/110]">
               <Image
                 src="/bg/aboutScene.svg"
@@ -65,7 +65,7 @@ export const About = () => {
           </div>
         </div>
 
-        <div className="pb-[106px] tab:pb-[129px] pc:pb-[140px]">
+        <div className="pb-[106px] tab:pb-[129px] pc:pb-[140px] mt-5">
           <h2 className="text-center mb-9 font-exo text-title text-3xl pc:text-4xl font-semibold">
             {t("ourValuesTitle")}
           </h2>

@@ -24,7 +24,7 @@ export default function ModelScrollerTab() {
       if (startRect.top > 0) {
         targetY.current = 0;
       } else if (endRect.top <= 0) {
-        targetY.current = Math.floor(endRect.top);
+        targetY.current = Math.floor(endRect.top - 20);
       } else {
         targetY.current = 0;
       }
