@@ -125,8 +125,8 @@ export function Accordion({
                         key={idx}
                         src={url}
                         alt={`${item.title} ${idx + 1}`}
-                        width={282}
-                        height={176}
+                        width={578}
+                        height={325}
                         className="w-full h-auto aspect-[282/176] object-cover "
                       />
                     ))}
@@ -143,7 +143,7 @@ export function Accordion({
               </div>
             ) : null}
             {item.list ? (
-              <ul className="flex flex-col gap-4 tab:pr-12 tab:text-base12">
+              <ul className="flex flex-col gap-4 tab:text-base12 tab:w-[52%]">
                 {item.list.map((listItem: string, index: number) => (
                   <li key={index} className="flex items-center gap-2">
                     <div className="w-4 h-4 flex items-center justify-center">
