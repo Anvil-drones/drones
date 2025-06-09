@@ -83,7 +83,7 @@
     "formName": "Введіть ваше ім’я*",
     "formEmail": "email*",
     "formOrganization": "організація",
-    "formPhone": "телефон",
+    "formPhone": "номер телефону",
     "formAboutYou": "Напишіть коротко про себе*",
     "formAboutProject": "Напишіть коротко про проєкт",
     "nullName": "Введіть ваше ім’я",
