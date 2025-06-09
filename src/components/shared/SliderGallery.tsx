@@ -56,7 +56,7 @@ export const SliderGallery = ({ projects }: { projects: ProjectType }) => {
           {projects.map(project => (
             <div
               key={project.title}
-              className="flex-[0_0_100%] tab:flex-[0_0_46%] w-full px-[5px] pc:px-3"
+              className="flex-[0_0_100%] tab:flex-[0_0_46%] w-full px-[5px] pc:px-3 "
             >
               {project.imageURL ? (
                 <Image
@@ -64,14 +64,30 @@ export const SliderGallery = ({ projects }: { projects: ProjectType }) => {
                   alt={project.title}
                   width={578}
                   height={325}
-                  className="aspect-[288/161] object-cover w-full h-auto mb-2 pc:mb-3"
+                  className="aspect-[288/161] object-cover w-full h-auto"
                 />
-              ) : null}
-              <p className=" uppercase font-bold pc:text-lg">{project.title}</p>
+              ) : (
+                <video
+                  width="578"
+                  height="325"
+                  controls
+                  playsInline
+                  autoPlay
+                  muted
+                  loop
+                  className="aspect-[288/161] object-cover w-full h-auto"
+                >
+                  <source src={project.videoURL} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              )}
+              <p className=" uppercase font-bold pc:text-lg  mt-2 pc:mt-3">
+                {project.title}
+              </p>
             </div>
           ))}
         </div>
-        <div className="tab:absolute tab:top-[-92px] pc:top-[-100px] tab:right-0 mt-12 ">
+        <div className="tab:absolute tab:top-[-118px] pc:top-[-140px] tab:right-0 mt-12 ">
           <div className="flex justify-between gap-4 tab:gap-5 pc:gap-6">
             <PrevButton
               onClick={onPrevButtonClick}

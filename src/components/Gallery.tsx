@@ -6,10 +6,10 @@ import { ProjectType, SliderGallery } from "./shared/SliderGallery";
 export const Gallery = () => {
   const t = useTranslations("HomePage");
   const projects: ProjectType = [
-    { title: t("slide1Title"), imageURL: "/images/slide11.jpg" },
-    { title: t("slide2Title"), imageURL: "/images/slide2.jpg" },
-    { title: t("slide3Title"), imageURL: "/images/slide31.jpg" },
-    { title: t("slide4Title"), imageURL: "/images/slide4.jpg" },
+    { title: t("slide1Title"), imageURL: "/images/slide1.jpg" },
+    { title: t("slide2Title"), videoURL: "/images/working-team.mp4" },
+    { title: t("slide3Title"), imageURL: "/images/image4.jpg" },
+    { title: t("slide4Title"), videoURL: "/images/training-ground.mp4" },
   ];
   return (
     <section
