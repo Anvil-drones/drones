@@ -15,15 +15,23 @@ export const Footer = () => {
   const locale = useLocale();
 
   return (
-    <footer className="relative overflow-hidden  pb-[183px] tab:pb-[60px] pc:pb-10">
+    <footer className="relative overflow-hidden pb-[183px] tab:pb-[60px] pc:pb-10">
       <div className="absolute inset-0 z-[-1] flex justify-center">
         <Image
           src="/bg/kolo.svg"
           alt="circle decor"
-          width={2000}
-          height={2000}
-          className="absolute top-6 pc:top-4 left-1/2 -translate-x-1/2 w-[180vw] max-w-none h-auto"
-          priority
+          width={800}
+          height={800}
+          className="tab:hidden absolute top-6 pc:top-4 left-1/2 -translate-x-1/2 w-[120vw] max-w-none h-auto"
+          loading="lazy"
+        />
+        <Image
+          src="/bg/kolo.svg"
+          alt="circle decor"
+          width={1621}
+          height={747}
+          className="hidden tab:block absolute top-6 pc:top-4 left-1/2 -translate-x-1/2 w-[100vw] max-w-none h-auto"
+          loading="lazy"
         />
       </div>
 
