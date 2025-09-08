@@ -9,9 +9,6 @@ import { CookiesComponent } from "@/components/Cookies";
 import { Header } from "@/components/Header/Header";
 import { routing } from "@/i18n/routing";
 
-const IS_SHOWN_TO_SEARCH_ENGINES =
-  process.env.NEXT_PUBLIC_VERCEL_ENV === "production" ? false : true;
-
 const exo = Exo_2({
   variable: "--font-exo",
   subsets: ["latin"],
@@ -76,10 +73,6 @@ export default async function RootLayout({
     <html lang={locale} suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <meta name="type" property="og:type" content="website" />
-        {IS_SHOWN_TO_SEARCH_ENGINES && (
-          <meta name="robots" content="noindex,nofollow" />
-        )}
       </head>
       <body
         className={`${exo.variable} ${robotoMono.variable} antialiased overflow-x-visible`}
