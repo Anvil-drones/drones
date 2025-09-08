@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { useTranslations } from "next-intl";
 
+import { BgSceneAbout } from "./Icons/BgSceneAbout";
 import { Union } from "./Icons/Union";
 import { ValueDiv } from "./shared/ValueDiv";
 
@@ -54,13 +54,7 @@ export const About = () => {
 
           <div className="flex-1 flex items-center justify-center mt-16 pc:mt-36">
             <div className="relative w-full tab:max-w-[550px] pc:max-w-[748px]  aspect-[288/170] tab:aspect-[258/170] pc:aspect-[220/110]">
-              <Image
-                src="/bg/aboutScene.svg"
-                alt="drone landing pad"
-                width={748}
-                height={172}
-                className="absolute bottom-[45px] tab:bottom-[40px] pc:bottom-[40px] left-1/2 -translate-x-1/2"
-              />
+              <BgSceneAbout className="w-full h-auto absolute bottom-[45px] tab:bottom-[40px] pc:bottom-[40px] left-1/2 -translate-x-1/2" />
             </div>
           </div>
         </div>
