@@ -1,6 +1,8 @@
-import Image from "next/image";
 import { useTranslations } from "next-intl";
 
+import { BgRectangle } from "./Icons/BgRectangle";
+import { BgScene } from "./Icons/BgScene";
+import { IconText } from "./Icons/IconText";
 import { ListStyleTypeFourSquare } from "./shared/ListStyleTypeFourSquare";
 import { ConsultationModal } from "./shared/Modal/СonsultationModal";
 
@@ -45,13 +47,7 @@ export const Hero = () => {
             })}
           </h1>
           <div className="hidden tab:block absolute top-4 right-0 min-w-[211px] min-h-[89px]">
-            <Image
-              src="/bg/rectangleHero.svg"
-              alt="background rectangle"
-              width={211}
-              height={89}
-              className="w-full h-full"
-            />
+            <BgRectangle className="w-full h-full" />
             <div className="absolute text-sm1 top-0 left-0 w-full h-full pt-4 pl-[30px] uppercase z-[-1]">
               <p className="mb-3">{t("lableTitle")}</p>
               <div className="w-[115px]">
@@ -74,20 +70,8 @@ export const Hero = () => {
             id="hero-model-anchor"
             className="relative w-full tab:w-[75%] tab:max-w-[550px] pc:max-w-[748px] aspect-[288/170] tab:aspect-[258/170] pc:aspect-[220/110] z-10"
           >
-            <Image
-              src="/bg/text.svg"
-              alt="FPV 7"
-              width={610}
-              height={207}
-              className="w-[80%] absolute top-5 pc:top-[-60px] left-1/2 -translate-x-1/2"
-            />
-            <Image
-              src="/bg/heroScene.svg"
-              alt="drone landing pad"
-              width={748}
-              height={172}
-              className="absolute bottom-[25%] tab:bottom-[25%] pc:bottom-[23%] left-1/2 -translate-x-1/2"
-            />
+            <IconText className="w-[80%] absolute top-5 pc:top-[-60px] left-1/2 -translate-x-1/2" />
+            <BgScene className="absolute bottom-[25%] tab:bottom-[25%] pc:bottom-[23%] left-1/2 -translate-x-1/2 w-full h-auto" />
           </div>
         </div>
         <div className="flex flex-col tab:flex-row gap-10 justify-center tab:justify-between mx-auto max-w-[330px] tab:max-w-full">
