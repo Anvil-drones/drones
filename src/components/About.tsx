@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 import { BgSceneAbout } from "./Icons/BgSceneAbout";
@@ -26,12 +27,12 @@ export const About = () => {
         />
       </div>
       <div className="absolute inset-0 z-[-2] overflow-hidden">
-        <div
-          className="w-full h-full bg-no-repeat bg-center filter blur-[150px] "
-          style={{
-            backgroundImage: "url('/bg/bgAbout.jpg')",
-            backgroundSize: "cover",
-          }}
+        <Image
+          src="/bg/bgAbout.jpg"
+          alt="decorative background"
+          fill
+          className="object-cover filter blur-[60px]"
+          priority
         />
       </div>
       <Union className="absolute top-[15px] tab:top-[25px] left-1/2 -translate-x-1/2 w-[186px] tab:w-[341px] h-auto z-[2]" />
