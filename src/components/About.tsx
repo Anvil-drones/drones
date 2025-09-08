@@ -34,7 +34,6 @@ export const About = () => {
           className="object-cover filter blur-[60px]"
           priority
         />
-        {/* <div className="absolute inset-0 filter blur-[150px]" /> */}
       </div>
       <Union className="absolute top-[15px] tab:top-[25px] left-1/2 -translate-x-1/2 w-[186px] tab:w-[341px] h-auto z-[2]" />
       <h3 className="absolute top-[21px] tab:top-[41px] tab:text-base left-1/2 -translate-x-1/2 z-[3] uppercase text-accent">
