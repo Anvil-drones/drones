@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
+import { BgRectangle } from "./Icons/BgRectangle";
 import { ListStyleTypeFourSquare } from "./shared/ListStyleTypeFourSquare";
 import { ConsultationModal } from "./shared/Modal/СonsultationModal";
 
@@ -45,13 +46,7 @@ export const Hero = () => {
             })}
           </h1>
           <div className="hidden tab:block absolute top-4 right-0 min-w-[211px] min-h-[89px]">
-            <Image
-              src="/bg/rectangleHero.svg"
-              alt="background rectangle"
-              width={211}
-              height={89}
-              className="w-full h-full"
-            />
+            <BgRectangle className="w-full h-full" />
             <div className="absolute text-sm1 top-0 left-0 w-full h-full pt-4 pl-[30px] uppercase z-[-1]">
               <p className="mb-3">{t("lableTitle")}</p>
               <div className="w-[115px]">
