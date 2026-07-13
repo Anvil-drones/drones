@@ -3,6 +3,7 @@ import { useLocale, useTranslations } from "next-intl";
 
 import { selectedLink } from "@/utils/selectedLink";
 
+import { EMAIL, TEL } from "./assets/contacts";
 import { Menu } from "./Header/Menu";
 import { SocialLinks } from "./Header/SocialLinks";
 import { IconLogo } from "./Icons/IconLogo";
@@ -71,16 +72,16 @@ export const Footer = () => {
           </div>
           <div className="pc:flex flex-col gap-2 font-exo hidden pc:w-1/3">
             <a
-              href="tel:+380955076901"
+              href={`tel:${TEL.replace(/\s+/g, "")}`}
               className="text-title text-lg13 font-semibold text-center hoverFooter"
             >
-              +380 95 507 69 01
+              {TEL}
             </a>
             <a
-              href="mailto:anvil_technologi@ukr.net"
+              href={`mailto:${EMAIL}`}
               className="text-title text-lg13 font-semibold text-center pc:lowercase hoverFooter"
             >
-              anvil_technologi@ukr.net
+              {EMAIL}
             </a>
           </div>
           <div className="tab:w-1/2 tab:text-right pc:text-left pc:pl-7 pc:w-1/3 text-center">

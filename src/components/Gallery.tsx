@@ -7,9 +7,15 @@ export const Gallery = () => {
   const t = useTranslations("HomePage");
   const projects: ProjectType = [
     { title: t("slide1Title"), imageURL: "/images/slide1.jpg" },
-    { title: t("slide2Title"), videoURL: "/images/working-team.mp4" },
+    { title: t("slide2Title"), videoURL: "/videos/working-team.mp4" },
     { title: t("slide3Title"), imageURL: "/images/image4.jpg" },
-    { title: t("slide4Title"), videoURL: "/images/training-ground.mp4" },
+    { title: t("slide4Title"), videoURL: "/videos/training-ground.mp4" },
+    { title: "Hammer 10", videoURL: "/videos/hammer-10-1.mp4" },
+    { title: "Hammer 10", videoURL: "/videos/hammer-10-2.mp4" },
+    { title: "Hammer 10", videoURL: "/videos/hammer-10-3.mp4" },
+    { title: "Hammer 10", videoURL: "/videos/hammer-10-4.mp4" },
+    { title: "Hammer 13", videoURL: "/videos/hammer-13-1.mp4" },
+    { title: "Vulcan 10", videoURL: "/videos/vulcan-10-1.mp4" },
   ];
   return (
     <section

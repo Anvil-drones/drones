@@ -1,5 +1,7 @@
 import { useTranslations } from "next-intl";
 
+import { EMAIL, TEL } from "../assets/contacts";
+
 export const CallUsInfo = ({ footer }: { footer?: boolean }) => {
   const t = useTranslations("Menu");
   return (
@@ -11,16 +13,16 @@ export const CallUsInfo = ({ footer }: { footer?: boolean }) => {
       </h3>
       <div className="flex flex-col gap-1 font-exo pc:hidden">
         <a
-          href="tel:+380955076901"
+          href={`tel:${TEL.replace(/\s+/g, "")}`}
           className="text-title text-lg13 font-semibold text-center hoverFooter"
         >
-          +380 95 507 69 01
+          {TEL}
         </a>
         <a
-          href="mailto:anvil_technologi@ukr.net"
+          href={`mailto:${EMAIL}`}
           className="text-title text-lg13 font-semibold text-center hoverFooter"
         >
-          anvil_technologi@ukr.net
+          {EMAIL}
         </a>
       </div>
     </div>

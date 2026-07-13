@@ -13,6 +13,12 @@ export const Hero = () => {
     t("descriptionItem2"),
     t("descriptionItem3"),
   ];
+  const list = [
+    t("lableItem1"),
+    t("lableItem2"),
+    t("lableItem3"),
+    t("lableItem4"),
+  ];
 
   return (
     <section
@@ -46,21 +52,13 @@ export const Hero = () => {
               br: () => <br />,
             })}
           </h1>
-          <div className="hidden tab:block absolute top-4 right-0 min-w-[211px] min-h-[89px]">
+          <div className="hidden tab:block absolute top-4 right-0 min-w-[230px] min-h-[110px]">
             <BgRectangle className="w-full h-full" />
-            <div className="absolute text-sm1 top-0 left-0 w-full h-full pt-4 pl-[30px] uppercase z-[-1]">
-              <p className="mb-3">{t("lableTitle")}</p>
-              <div className="w-[115px]">
-                <div className="flex justify-between mb-2">
-                  <p>{t("lableR")}</p>
-                  <p>{t("lableKM")}</p>
-                </div>
-                <div className="flex justify-between">
-                  <p>{t("lableW")}</p>
-                  <p>{t("lableKG")}</p>
-                </div>
-              </div>
-            </div>
+            <ul className="absolute text-sm1 top-0 flex flex-col gap-2 left-0 w-full h-full pt-4 pl-[30px] uppercase z-[-1]">
+              {list.map(item => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
             <div className="w-1 h-1 bg-accent absolute top-[-2px] left-[-2px]" />
           </div>
         </div>
@@ -70,7 +68,7 @@ export const Hero = () => {
             id="hero-model-anchor"
             className="relative w-full tab:w-[75%] tab:max-w-[550px] pc:max-w-[748px] aspect-[288/170] tab:aspect-[258/170] pc:aspect-[220/110] z-10"
           >
-            <IconText className="w-[80%] absolute top-5 pc:top-[-60px] left-1/2 -translate-x-1/2" />
+            <IconText className="w-[80%] h-auto absolute top-5 pc:top-[-60px] left-1/2 -translate-x-1/2" />
             <BgScene className="absolute bottom-[25%] tab:bottom-[25%] pc:bottom-[23%] left-1/2 -translate-x-1/2 w-full h-auto" />
           </div>
         </div>
