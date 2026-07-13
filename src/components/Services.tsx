@@ -21,13 +21,7 @@ export const Services = () => {
     {
       title: t("specializationItemTitle2"),
       text: t("specializationItemDescription2"),
-      list: [
-        t("specList2Item1"),
-        t("specList2Item2"),
-        t("specList2Item3"),
-        t("specList2Item4"),
-      ],
-      imageURL: "/images/image2.jpg",
+      imageURL: "/images/image22.jpg",
     },
     {
       title: t("specializationItemTitle3"),

@@ -53,9 +53,9 @@ export const SliderGallery = ({ projects }: { projects: ProjectType }) => {
     <div className="relative min-w-full">
       <div className=" overflow-hidden" ref={emblaRef}>
         <div className=" flex">
-          {projects.map(project => (
+          {projects.map((project, ind) => (
             <div
-              key={project.title}
+              key={project.title + ind}
               className="flex-[0_0_100%] tab:flex-[0_0_46%] w-full px-[5px] pc:px-3 "
             >
               {project.imageURL ? (
