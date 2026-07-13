@@ -1,13 +1,16 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { PropsWithChildren } from "react";
 
-const variants = {
+const variants: Variants = {
   hidden: { opacity: 0, scale: 0.5 },
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 1, ease: "easeOut" },
+    transition: {
+      duration: 1,
+      ease: "easeOut",
+    },
   },
 };
 export const AnimatedCard = ({ children }: PropsWithChildren) => {
