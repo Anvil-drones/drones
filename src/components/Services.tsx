@@ -1,44 +1,18 @@
 import { useTranslations } from "next-intl";
 
 import { Accordion } from "./Accordion/Accordion";
+import { getServicesList } from "./assets/dataLists";
 import { Union } from "./Icons/Union";
+import { Trusted } from "./Trusted";
 
 export const Services = () => {
   const t = useTranslations("HomePage");
-  const servicesList = [
-    {
-      title: t("specializationItemTitle1"),
-      text: t("specializationItemDescription1"),
-      list: [
-        t("specList1Item1"),
-        t("specList1Item2"),
-        t("specList1Item3"),
-        t("specList1Item4"),
-        t("specList1Item5"),
-      ],
-      imageURL: "/images/image1.jpg",
-    },
-    {
-      title: t("specializationItemTitle2"),
-      text: t("specializationItemDescription2"),
-      imageURL: "/images/image22.jpg",
-    },
-    {
-      title: t("specializationItemTitle3"),
-      text: t("specializationItemDescription3"),
-      imageURL: ["/images/image3.jpg", "/images/image4.jpg"],
-    },
-    {
-      title: t("specializationItemTitle4"),
-      text: t("specializationItemDescription4"),
-      full: true,
-    },
-  ];
+  const servicesList = getServicesList(t);
 
   return (
     <section
       id="services"
-      className="mt-[-30px] tab:mt-[-50px] relative pb-[90px] tab:pb-[100px] clip-path-down-cut-mobile-service tab:clip-path-down-cut-tab-service"
+      className="mt-[-30px] tab:mt-[-50px] relative pb-[90px] tab:pb-[50px] clip-path-down-cut-mobile-service tab:clip-path-down-cut-tab-service"
     >
       <div className="absolute inset-0 z-[-1] overflow-hidden">
         <div
@@ -53,10 +27,10 @@ export const Services = () => {
       <h3 className="absolute top-[21px] tab:top-[43px] left-1/2 -translate-x-1/2 z-[3] uppercase text-accent">
         {t("services")}
       </h3>
-      <div className=" relative pt-[78px] tab:pt-[129px] pc:pt-[133px] px-4 tab:px-5 pc:px-[60px] max-w-[540px] tab:max-w-full pc:max-w-[1440px] mx-auto">
-        <h1 className="font-exo font-semibold text-3xl tab:text-4xl pc:text-5xl text-title uppercase mb-8 w-[250px]">
+      <div className=" relative pb-[60px] pt-[78px] tab:pt-[129px] pc:pt-[133px] px-4 tab:px-5 pc:px-[60px] max-w-[540px] tab:max-w-full pc:max-w-[1440px] mx-auto">
+        <h2 className="font-exo font-semibold text-3xl tab:text-4xl pc:text-5xl text-title uppercase mb-8 w-[250px]">
           {t("specializationTitle")}
-        </h1>
+        </h2>
         <ul className="pc:ml-[375px]">
           {servicesList.map((item, index) => (
             <li
@@ -70,6 +44,7 @@ export const Services = () => {
         <div className="hidden pc:block w-9 h-9 border-l border-b absolute bottom-0 left-[60px]" />
         <div className="hidden pc:block w-9 h-9 border-r border-t absolute top-[133px] right-[60px]" />
       </div>
+      <Trusted />
     </section>
   );
 };
