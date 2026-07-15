@@ -3,7 +3,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
 
-import { ContactLinkButton } from "../shared/ContactLinkButton";
+import { CatalogLinkButton } from "../shared/CatalogLinkButton";
 import ScrambleText from "../shared/ScrambleText";
 
 export const Menu = ({
@@ -29,6 +29,9 @@ export const Menu = ({
 
   const handleLinkClick = (id: string) => {
     if (onClick) onClick();
+    if (pathname === "/" && id === "/") {
+      return;
+    }
 
     if (pathname !== "/") {
       router.push(`/${id}`);
@@ -59,7 +62,7 @@ export const Menu = ({
               <button
                 onClick={() => handleLinkClick(content.path)}
                 className={
-                  " uppercase text-title tab:text-sm12 py-2 px-4 pc:text-base"
+                  " uppercase text-title tab:text-sm12 py-2 px-4 tab:px-3 pc:px-4 pc:text-base"
                 }
               >
                 <ScrambleText
@@ -69,12 +72,12 @@ export const Menu = ({
                 />
               </button>
             ) : (
-              <ContactLinkButton
+              <CatalogLinkButton
                 onClick={onClick}
                 text={content.name}
                 locale={locale}
                 link={content.path}
-                animate={hoveredIndex === idx}
+                className="tab:hidden"
               />
             )}
           </li>

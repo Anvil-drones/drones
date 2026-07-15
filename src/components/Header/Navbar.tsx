@@ -35,7 +35,7 @@ const Navbar = () => {
         setIsHeaderMenuOpened={setIsHeaderMenuOpened}
       />
 
-      <Menu className="hidden tab:flex tab:gap-5 pc:gap-8" />
+      <Menu className="hidden tab:flex tab:gap-1 pc:gap-8" />
     </>
   );
 };
