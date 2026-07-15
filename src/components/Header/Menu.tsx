@@ -1,6 +1,9 @@
 "use client";
+import { usePathname, useRouter } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
+import { useState } from "react";
 
+import { ContactLinkButton } from "../shared/ContactLinkButton";
 import ScrambleText from "../shared/ScrambleText";
 
 export const Menu = ({
@@ -10,22 +13,35 @@ export const Menu = ({
   className?: string;
   onClick?: () => void;
 }) => {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const t = useTranslations("Menu");
   const locale = useLocale();
 
   const menuList = [
-    { name: t("about"), path: "#about" },
-    { name: t("services"), path: "#services" },
-    { name: t("gallery"), path: "#gallery" },
-    { name: t("vacancy"), path: "#vacancy" },
+    { type: "button", name: t("about"), path: "/" },
+    { type: "button", name: t("services"), path: "#services" },
+    { type: "button", name: t("gallery"), path: "#gallery" },
+    { type: "button", name: t("vacancy"), path: "#vacancy" },
+    { type: "link", name: t("catalog"), path: "/catalog" },
   ];
+  const router = useRouter();
+  const pathname = usePathname();
 
   const handleLinkClick = (id: string) => {
     if (onClick) onClick();
 
+    if (pathname !== "/") {
+      router.push(`/${id}`);
+      return;
+    }
+
     const element = document.querySelector(id);
+
     if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
     }
   };
 
@@ -33,13 +49,34 @@ export const Menu = ({
     <ul className={`${className}  `}>
       {menuList.map((content, idx) => {
         return (
-          <li key={idx}>
-            <button
-              onClick={() => handleLinkClick(content.path)}
-              className={" uppercase text-title tab:text-sm12 pc:text-base"}
-            >
-              <ScrambleText text={content.name} locale={locale} />
-            </button>
+          <li
+            key={idx}
+            onMouseEnter={() => setHoveredIndex(idx)}
+            onMouseLeave={() => setHoveredIndex(null)}
+            className={`flex justify-center items-center${content.type === "link" ? "mb-2" : " "}`}
+          >
+            {content.type === "button" ? (
+              <button
+                onClick={() => handleLinkClick(content.path)}
+                className={
+                  " uppercase text-title tab:text-sm12 py-2 px-4 pc:text-base"
+                }
+              >
+                <ScrambleText
+                  text={content.name}
+                  locale={locale}
+                  animate={hoveredIndex === idx}
+                />
+              </button>
+            ) : (
+              <ContactLinkButton
+                onClick={onClick}
+                text={content.name}
+                locale={locale}
+                link={content.path}
+                animate={hoveredIndex === idx}
+              />
+            )}
           </li>
         );
       })}

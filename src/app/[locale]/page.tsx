@@ -1,5 +1,4 @@
 import { About } from "@/components/About";
-import { Footer } from "@/components/Footer";
 import { Gallery } from "@/components/Gallery";
 import { Hero } from "@/components/Hero";
 import { Partner } from "@/components/Partner";
@@ -21,7 +20,6 @@ export default function Home() {
       <Stages />
       <Gallery />
       <Vacancies />
-      <Footer />
     </>
   );
 }
