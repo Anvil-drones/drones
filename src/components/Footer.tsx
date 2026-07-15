@@ -56,7 +56,7 @@ export const Footer = () => {
         <div className="tab:flex tab:justify-between mb-12 tab:mb-[104px] pc:mb-[56px]">
           <Menu className="hidden tab:flex tab:flex-col tab:justify-between pc:flex-row pc:w-[366px] pc:justify-between" />
           <CallUsInfo footer />
-          <SocialLinks className="mt-6 mb-8 tab:my-0 tab:flex-col tab:justify-between tab:text-sm1 pc:w-[308px] pc:flex-row pc:text-base pc:mr-[103px]" />
+          <SocialLinks className="mt-6 mb-8 tab:my-0 tab:flex-col tab:text-sm1 pc:w-[308px] pc:flex-row pc:text-base pc:mr-[103px]" />
         </div>
         <div className="tab:flex text-sm1 uppercase text-center tab:text-left justify-between pc:items-baseline">
           <div className="w-full tab:w-1/2 pc:w-1/3 mb-7">
