@@ -76,11 +76,11 @@ export default async function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body
-        className={`${exo.variable} ${robotoMono.variable} antialiased overflow-x-visible`}
+        className={`${exo.variable} ${robotoMono.variable} antialiased min-h-screen flex flex-col`}
       >
         <NextIntlClientProvider>
           <Header />
-          <main>{children}</main>
+          <main className="flex-1">{children}</main>
           <Footer />
           <CookiesComponent />
         </NextIntlClientProvider>
