@@ -1,3 +1,5 @@
+import { useTranslations } from "next-intl";
+
 export type DroneFeature = {
   label: string;
   value: string;
@@ -7,10 +9,14 @@ export type DroneEquipment = {
   label: string;
   value: string;
 };
+export type DroneFilterType =
+  "all" | "fpv-opt" | "fpv-radio" | "fpv-cargo" | "interceptor";
+
+export type DroneFilter = { name: string; type: DroneFilterType };
 
 export type Drone = {
   slug: string;
-  type: "all" | "fpv-opt" | "fpv-radio" | "fpv-cargo" | "interceptor";
+  type: DroneFilterType;
   images: string[];
   uk: {
     title: string;
@@ -34,7 +40,6 @@ export const dronesList: Drone[] = [
       "/images/catalog/vulcan-10/1.jpg",
       "/images/catalog/vulcan-10/2.jpg",
       "/images/catalog/vulcan-10/3.jpg",
-      "/images/catalog/vulcan-10/4.jpg",
     ],
     uk: {
       title: "БПЛА “VULCAN 10”",
@@ -156,10 +161,9 @@ export const dronesList: Drone[] = [
     slug: "vulcan-13",
     type: "fpv-radio",
     images: [
-      "/images/catalog/vulcan-13-1.jpg",
-      "/images/catalog/vulcan-13-2.jpg",
-      "/images/catalog/vulcan-13-3.jpg",
-      "/images/catalog/vulcan-13-4.jpg",
+      "/images/catalog/vulcan-13/1.jpg",
+      "/images/catalog/vulcan-13/2.jpg",
+      "/images/catalog/vulcan-13/3.jpg",
     ],
 
     uk: {
@@ -284,10 +288,8 @@ export const dronesList: Drone[] = [
     slug: "hammer-10",
     type: "fpv-opt",
     images: [
-      "/images/catalog/hammer-10-1.jpg",
-      "/images/catalog/hammer-10-2.jpg",
-      "/images/catalog/hammer-10-3.jpg",
-      "/images/catalog/hammer-10-4.jpg",
+      "/images/catalog/hammer-10/1.jpg",
+      "/images/catalog/hammer-10/2.jpg",
     ],
 
     uk: {
@@ -404,10 +406,8 @@ export const dronesList: Drone[] = [
     slug: "hammer-13",
     type: "fpv-opt",
     images: [
-      "/images/catalog/hammer-13-1.jpg",
-      "/images/catalog/hammer-13-2.jpg",
-      "/images/catalog/hammer-13-3.jpg",
-      "/images/catalog/hammer-13-4.jpg",
+      "/images/catalog/hammer-13/1.jpg",
+      "/images/catalog/hammer-13/2.jpg",
     ],
 
     uk: {
@@ -524,8 +524,9 @@ export const dronesList: Drone[] = [
     slug: "hammer-15",
     type: "fpv-opt",
     images: [
-      "/images/catalog/hammer-15-1.jpg",
-      "/images/catalog/hammer-15-2.jpg",
+      "/images/catalog/hammer-15/1.jpg",
+      "/images/catalog/hammer-15/2.jpg",
+      "/images/catalog/hammer-15/3.jpg",
     ],
 
     uk: {
@@ -641,7 +642,7 @@ export const dronesList: Drone[] = [
   {
     slug: "fu-4",
     type: "interceptor",
-    images: ["/images/catalog/fu-4-1.jpg", "/images/catalog/fu-4-2.jpg"],
+    images: ["/images/catalog/fu-4/1.jpg", "/images/catalog/fu-4/2.jpg"],
 
     uk: {
       title: "БпАК “FU-4”",
@@ -765,8 +766,9 @@ export const dronesList: Drone[] = [
     slug: "vulcan-10-c",
     type: "fpv-cargo",
     images: [
-      "/images/catalog/vulcan-10-c-1.jpg",
-      "/images/catalog/vulcan-10-c-2.jpg",
+      "/images/catalog/vulcan-10-c/1.jpg",
+      "/images/catalog/vulcan-10-c/2.jpg",
+      "/images/catalog/vulcan-10-c/3.jpg",
     ],
 
     uk: {
@@ -887,4 +889,14 @@ export const dronesList: Drone[] = [
       ],
     },
   },
+];
+
+export const filterCatalogList = (
+  t: ReturnType<typeof useTranslations>
+): DroneFilter[] => [
+  { name: t("catalogFilterAll"), type: "all" },
+  { name: t("catalogFilter1"), type: "fpv-opt" },
+  { name: t("catalogFilter2"), type: "fpv-cargo" },
+  { name: t("catalogFilter3"), type: "fpv-radio" },
+  { name: t("catalogFilter4"), type: "interceptor" },
 ];

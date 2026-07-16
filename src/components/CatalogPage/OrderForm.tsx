@@ -208,7 +208,7 @@ export const OrderForm = ({ notificationHandler }: FormInModalProps) => {
 
           <div className="flex justify-center tab:justify-end tab:w-1/2">
             <Button
-              text={tButton("submit")}
+              text={tButton("callUs")}
               submit
               disabled={status === "Завантаження..." ? true : false}
             />
