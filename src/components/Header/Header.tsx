@@ -1,10 +1,17 @@
 "use client";
 
-import { IconLogo } from "../Icons/IconLogo";
+import { useLocale, useTranslations } from "next-intl";
+
+import { Link } from "@/i18n/navigation";
+
 import LanguageSwitcher from "../LanguageSwitcher";
+import { CatalogLinkButton } from "../shared/CatalogLinkButton";
+import { IconLogo } from "../shared/Icons/IconLogo";
 import Navbar from "./Navbar";
 
 export const Header = () => {
+  const t = useTranslations("Menu");
+  const locale = useLocale();
   return (
     <>
       <header className="relative  ">
@@ -18,7 +25,9 @@ export const Header = () => {
           />
         </div>
         <div className="h-[64px] px-4 tab:px-5 pc:px-[60px] max-w-[540px] tab:max-w-full pc:max-w-[1440px] mx-auto  flex items-center justify-between ">
-          <IconLogo className="relative z-10 w-[72px] tab:w-[92px]" />
+          <Link href="/" className="flex items-center ">
+            <IconLogo className="relative z-10 w-[72px] tab:w-[92px]" />
+          </Link>
           <div className="tab:hidden mr-7 mt-1">
             <LanguageSwitcher />
           </div>
@@ -27,6 +36,12 @@ export const Header = () => {
             <div className="hidden tab:flex mr-3 tab:mt-1 pc:mr-2">
               <LanguageSwitcher />
             </div>
+            <CatalogLinkButton
+              text={t("catalog")}
+              locale={locale}
+              link="/catalog"
+              className="hidden tab:flex tab:max-w-[150px] pc:max-w-[225px]"
+            />
           </nav>
         </div>
       </header>

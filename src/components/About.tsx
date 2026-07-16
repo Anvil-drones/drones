@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-import { BgSceneAbout } from "./Icons/BgSceneAbout";
-import { Union } from "./Icons/Union";
+import { BgSceneAbout } from "./shared/Icons/BgSceneAbout";
+import { Union } from "./shared/Icons/Union";
 import { ValueDiv } from "./shared/ValueDiv";
 
 export const About = () => {

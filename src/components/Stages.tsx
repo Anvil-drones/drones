@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 
-import { Union } from "./Icons/Union";
 import { AnimatedCard } from "./shared/AnimatedCard";
+import { Union } from "./shared/Icons/Union";
 import { ConsultationModal } from "./shared/Modal/СonsultationModal";
 import { StagesCard } from "./shared/StagesCard";
 

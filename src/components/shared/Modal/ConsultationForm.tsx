@@ -3,8 +3,8 @@ import axios from "axios";
 import { useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
 
-import { IconEmpty } from "@/components/Icons/IconEmpty";
-import { IconPaperclip } from "@/components/Icons/IconPaperclip";
+import { IconEmpty } from "@/components/shared/Icons/IconEmpty";
+import { IconPaperclip } from "@/components/shared/Icons/IconPaperclip";
 import { FormInModalProps } from "@/types/modalProps";
 import { selectedLink } from "@/utils/selectedLink";
 

@@ -1,5 +1,5 @@
-import { IconArrowAcordion } from "../Icons/IconArrowAcordion";
-import { IconEmpty } from "../Icons/IconEmpty";
+import { IconArrowAcordion } from "./Icons/IconArrowAcordion";
+import { IconEmpty } from "./Icons/IconEmpty";
 
 export const AccordionButton = ({ className }: { className?: string }) => {
   return (

@@ -141,6 +141,8 @@ const config: Config = {
         black30: "#303030",
         corner: "#CCCCCC",
         black23: "#232323",
+        black33: "#333333",
+        black20: "#202020",
       },
       clipPath: {
         "hex-notch":
@@ -151,6 +153,10 @@ const config: Config = {
           "polygon(0 45px, 16px 15px, calc(50% - 93px) 15px, calc(50% - 82px) 2px, calc(50% + 82px) 2px, calc(50% + 93px) 15px, calc(100% - 16px) 15px, 100% 45px, 100% 0, 100% calc(100% - 30px), calc(100% - 16px) 100%, calc(50% + 92.5px) 100%, calc(50% + 82px) calc(100% - 13px), calc(50% - 81.3px) calc(100% - 13px), calc(50% - 92.5px) 100%, 16px 100%, 0 calc(100% - 30px))",
         "hex-notch-galery-tab":
           "polygon(0 73px, 50px 25px, calc(50% - 170px) 25px, calc(50% - 149px) 2px, calc(50% + 150px) 2px, calc(50% + 169px) 25px, calc(100% - 50px) 25px, 100% 73px, 100% 0, 100% calc(100% - 50px), calc(100% - 23px) 100%, calc(50% + 169px) 100%, calc(50% + 150px) calc(100% - 23.5px), calc(50% - 149.4px) calc(100% - 23.5px), calc(50% - 170px) 100%, 23px 100%, 0 calc(100% - 50px))",
+        "hex-notch-galery-catalog":
+          "polygon(0 45px, 16px 15px, calc(50% - 93px) 15px, calc(50% - 82px) 2px, calc(50% + 82px) 2px, calc(50% + 93px) 15px, calc(100% - 16px) 15px, 100% 45px, 100% 0, 100% calc(100% - 30px), calc(100% - 16px) 100%, 16px 100%, 0 calc(100% - 30px))",
+        "hex-notch-galery-tab-catalog":
+          "polygon(0 73px, 50px 25px, calc(50% - 170px) 25px, calc(50% - 149px) 2px, calc(50% + 150px) 2px, calc(50% + 169px) 25px, calc(100% - 50px) 25px, 100% 73px, 100% 0, 100% calc(100% - 50px), calc(100% - 23px) 100%, 23px 100%, 0 calc(100% - 50px))",
 
         "down-cut-mobile-service":
           "polygon(0 0, 16px 30px, calc(50% - 94px) 30px, calc(50% - 82px) 16px, calc(50% + 82px) 16px, calc(50% + 94px) 30px, calc(100% - 16px) 30px, 100% 0, 100% calc(100% - 30px), calc(100% - 16px) 100%, 16px 100%, 0 calc(100% - 30px))",

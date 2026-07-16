@@ -3,9 +3,9 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
-import { IconPlay } from "../Icons/IconPlay";
 import { AccordionButton } from "../shared/AccordionButton";
 import { FourSquaresRow } from "../shared/FourSquaresRow";
+import { IconPlay } from "../shared/Icons/IconPlay";
 
 interface AccordionProps {
   title: string;
@@ -33,10 +33,8 @@ export function Accordion({
         setContentHeight(scrollHeight + extraMargin);
       };
 
-      // 1. Одразу після mount
       updateHeight();
 
-      // 2. Після повного завантаження зображень
       const images = contentRef.current.querySelectorAll("img");
       let loadedCount = 0;
 

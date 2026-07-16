@@ -30,8 +30,8 @@ export const MobileMenu = ({
           className="absolute z-[-1] top-[69px] left-1/2 -translate-x-1/2"
         />
         <Menu
-          onClick={() => setIsHeaderMenuOpened(false)}
-          className="flex flex-col gap-6 items-center mt-[65px]"
+          onClickAction={() => setIsHeaderMenuOpened(false)}
+          className="flex flex-col gap-4 items-center mt-[65px]"
         />
         <div className="flex flex-col gap-6 mt-auto">
           <CallUsInfo />

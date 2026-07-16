@@ -3,13 +3,13 @@ import { useLocale, useTranslations } from "next-intl";
 
 import { selectedLink } from "@/utils/selectedLink";
 
-import { EMAIL, TEL } from "./assets/contacts";
-import { Menu } from "./Header/Menu";
-import { SocialLinks } from "./Header/SocialLinks";
-import { IconLogo } from "./Icons/IconLogo";
-import { CallUsInfo } from "./shared/CallUsInfo";
-import ModelViewerFooter from "./shared/ModelViewerFooter";
-import { UpToTopStatic } from "./shared/UpToTopStatic";
+import { EMAIL, TEL } from "../assets/contacts";
+import { Menu } from "../Header/Menu";
+import { SocialLinks } from "../Header/SocialLinks";
+import { CallUsInfo } from "../shared/CallUsInfo";
+import { IconLogo } from "../shared/Icons/IconLogo";
+import ModelViewerFooter from "../shared/ModelViewerFooter";
+import { UpToTopStatic } from "../shared/UpToTopStatic";
 
 export const Footer = () => {
   const t = useTranslations("HomePage");
@@ -19,19 +19,19 @@ export const Footer = () => {
     <footer className="relative overflow-hidden pb-[183px] tab:pb-[60px] pc:pb-10">
       <div className="absolute inset-0 z-[-1] flex justify-center">
         <Image
-          src="/bg/kolo.svg"
+          src="/bg/circle1.png"
           alt="circle decor"
           width={800}
           height={800}
-          className="tab:hidden absolute top-6 pc:top-4 left-1/2 -translate-x-1/2 w-[120vw] max-w-none h-auto"
+          className="tab:hidden absolute top-6 pc:top-4 left-1/2 -translate-x-1/2 w-[110vw] max-w-none h-auto"
           loading="lazy"
         />
         <Image
-          src="/bg/kolo.svg"
+          src="/bg/circle1.png"
           alt="circle decor"
-          width={1621}
+          width={1675}
           height={747}
-          className="hidden tab:block absolute top-6 pc:top-4 left-1/2 -translate-x-1/2 w-[100vw] max-w-none h-auto"
+          className="hidden tab:block absolute top-6 pc:top-4 left-1/2 -translate-x-1/2 w-[120vw] max-w-none h-auto"
           loading="lazy"
         />
       </div>

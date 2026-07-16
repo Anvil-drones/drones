@@ -1,26 +1,20 @@
 import { useTranslations } from "next-intl";
 
-import { Union } from "./Icons/Union";
-import { ProjectType, SliderGallery } from "./shared/SliderGallery";
+import { projectsGallery } from "./assets/dataLists";
+import { Union } from "./shared/Icons/Union";
+import { SliderGallery } from "./shared/SliderGallery";
 
-export const Gallery = () => {
+export const Gallery = ({ catalog }: { catalog?: boolean }) => {
   const t = useTranslations("HomePage");
-  const projects: ProjectType = [
-    { title: t("slide1Title"), imageURL: "/images/slide1.jpg" },
-    { title: t("slide2Title"), videoURL: "/videos/working-team.mp4" },
-    { title: t("slide3Title"), imageURL: "/images/image4.jpg" },
-    { title: t("slide4Title"), videoURL: "/videos/training-ground.mp4" },
-    { title: "Hammer 10", videoURL: "/videos/hammer-10-1.mp4" },
-    { title: "Hammer 10", videoURL: "/videos/hammer-10-2.mp4" },
-    { title: "Hammer 10", videoURL: "/videos/hammer-10-3.mp4" },
-    { title: "Hammer 10", videoURL: "/videos/hammer-10-4.mp4" },
-    { title: "Hammer 13", videoURL: "/videos/hammer-13-1.mp4" },
-    { title: "Vulcan 10", videoURL: "/videos/vulcan-10-1.mp4" },
-  ];
+
   return (
     <section
       id="gallery"
-      className="relative pt-[65px] tab:pt-[130px] pb-[105px] clip-path-hex-notch-galery tab:clip-path-hex-notch-galery-tab mt-[-45px] tab:mt-[-73px] z-[20] bg-blackCustom"
+      className={`relative pt-[65px] tab:pt-[130px] pb-[105px]  mt-[-45px] tab:mt-[-73px] z-[8] bg-blackCustom ${
+        catalog
+          ? "clip-path-hex-notch-galery-catalog tab:clip-path-hex-notch-galery-tab-catalog mb-[-30px] tab:mb-[-50px]"
+          : "clip-path-hex-notch-galery tab:clip-path-hex-notch-galery-tab"
+      }`}
     >
       <Union className="absolute top-[2px] left-1/2 -translate-x-1/2 w-[186px] tab:w-[341px] h-auto z-[2]" />
       <h3 className="absolute top-[8px] tab:top-5 left-1/2 -translate-x-1/2 z-[3] uppercase text-accent">
@@ -30,7 +24,7 @@ export const Gallery = () => {
         <h2 className="font-exo font-semibold uppercase text-center tab:text-left text-3xl pc:text-5xl mb-8 pc:mb-12">
           {t("portfolioTitle")}
         </h2>
-        <SliderGallery projects={projects} />
+        <SliderGallery projects={projectsGallery(t)} />
       </div>
     </section>
   );

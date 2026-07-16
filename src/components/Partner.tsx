@@ -1,11 +1,11 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-import { Icon1 } from "./Icons/Icon1";
-import { Icon2 } from "./Icons/Icon2";
-import { Icon3 } from "./Icons/Icon3";
-import { Icon4 } from "./Icons/Icon4";
-import { IconArrows } from "./Icons/IconArrows";
+import { Icon1 } from "./shared/Icons/Icon1";
+import { Icon2 } from "./shared/Icons/Icon2";
+import { Icon3 } from "./shared/Icons/Icon3";
+import { Icon4 } from "./shared/Icons/Icon4";
+import { IconArrows } from "./shared/Icons/IconArrows";
 import { ConsultationModal } from "./shared/Modal/СonsultationModal";
 
 export const Partner = () => {

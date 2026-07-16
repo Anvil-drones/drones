@@ -1,11 +1,13 @@
 import "./globals.css";
 
+import { Metadata } from "next";
 import { Exo_2, Roboto_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations } from "next-intl/server";
 
 import { CookiesComponent } from "@/components/Cookies";
+import { Footer } from "@/components/Footer/Footer";
 import { Header } from "@/components/Header/Header";
 import { routing } from "@/i18n/routing";
 
@@ -23,13 +25,13 @@ export async function generateMetadata({
   params,
 }: {
   params: Promise<{ locale: string }>;
-}) {
+}): Promise<Metadata> {
   const resolvedParams = await params;
   const { locale } = resolvedParams;
   const t = await getTranslations({ locale, namespace: "HomePage" });
 
   return {
-    metadataBase: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}`),
+    metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL!),
     alternates: {
       languages: {
         "en-US": "/en",
@@ -75,11 +77,12 @@ export default async function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body
-        className={`${exo.variable} ${robotoMono.variable} antialiased overflow-x-visible`}
+        className={`${exo.variable} ${robotoMono.variable} antialiased min-h-screen flex flex-col`}
       >
         <NextIntlClientProvider>
           <Header />
-          <main>{children}</main>
+          <main className="flex-1">{children}</main>
+          <Footer />
           <CookiesComponent />
         </NextIntlClientProvider>
       </body>

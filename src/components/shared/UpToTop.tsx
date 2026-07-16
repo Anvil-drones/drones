@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 
-import { IconUp } from "../Icons/IconUp";
+import { IconUp } from "./Icons/IconUp";
 
 export const UpToTop = () => {
   const [isVisible, setIsVisible] = useState(false);

@@ -6,9 +6,9 @@ import { useEffect } from "react";
 
 import { selectedLink } from "@/utils/selectedLink";
 
-import { IconClose } from "./Icons/IconClose";
-import { IconCookies } from "./Icons/IconCookies";
-import { IconEmpty } from "./Icons/IconEmpty";
+import { IconClose } from "./shared/Icons/IconClose";
+import { IconCookies } from "./shared/Icons/IconCookies";
+import { IconEmpty } from "./shared/Icons/IconEmpty";
 
 export const CookiesComponent = () => {
   const [isVisible, setIsVisible] = useState(false);
