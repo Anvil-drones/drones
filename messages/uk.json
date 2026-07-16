@@ -110,7 +110,18 @@
     "orderFull": "Замовити консультацію",
     "order": "Замовити",
     "catalogTitle": "Каталог",
-    "orderFormTitle": "Замовте консультацію \nз технічним експертом \nдронів ANVIL"
+    "orderFormTitle": "Замовте консультацію \nз технічним експертом \nдронів ANVIL",
+    "catalogFilterAll": "Всі",
+    "catalogFilterFpvOpt": "FPV оптоволоконні",
+    "catalogFilterFpvRadio": "FPV радіо",
+    "catalogFilterFpvCargo": "FPV транспортувальні",
+    "catalogFilterInterceptor": "Дрони-перехоплювачі",
+    "catalogFilter1": "FPV оптоволоконні",
+    "catalogFilter2": "FPV транспортувальні",
+    "catalogFilter3": "FPV радіо",
+    "catalogFilter4": "Дрони-перехоплювачі",
+    "features": "Характеристики",
+    "equipment": "Комплектація"
   },
   "Menu": {
     "about": "Про нас",

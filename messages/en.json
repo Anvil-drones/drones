@@ -110,7 +110,18 @@
     "orderFull": "Request a Consultation",
     "order": "Request",
     "catalogTitle": "Catalog",
-    "orderFormTitle": "Request a consultation\nwith an ANVIL\ntechnical expert"
+    "orderFormTitle": "Request a consultation\nwith an ANVIL\ntechnical expert",
+    "catalogFilterAll": "All",
+    "catalogFilterFpvOpt": "Fiber Optic FPV",
+    "catalogFilterFpvRadio": "Radio-Controlled FPV",
+    "catalogFilterFpvCargo": "Cargo FPV",
+    "catalogFilterInterceptor": "Interceptor Drones",
+    "catalogFilter1": "Fiber Optic FPV",
+    "catalogFilter2": "Cargo FPV",
+    "catalogFilter3": "Radio-Controlled FPV",
+    "catalogFilter4": "Interceptor Drones",
+    "features": "Specifications",
+    "equipment": "Equipment"
   },
   "Menu": {
     "about": "About us",
