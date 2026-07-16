@@ -33,10 +33,8 @@ export function Accordion({
         setContentHeight(scrollHeight + extraMargin);
       };
 
-      // 1. Одразу після mount
       updateHeight();
 
-      // 2. Після повного завантаження зображень
       const images = contentRef.current.querySelectorAll("img");
       let loadedCount = 0;
 
