@@ -141,6 +141,8 @@ const config: Config = {
         black30: "#303030",
         corner: "#CCCCCC",
         black23: "#232323",
+        black33: "#333333",
+        black20: "#202020",
       },
       clipPath: {
         "hex-notch":
