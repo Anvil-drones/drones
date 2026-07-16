@@ -88,7 +88,7 @@ export const OrderForm = ({ notificationHandler }: FormInModalProps) => {
   };
 
   const inputClass =
-    "mt-6 tab:mt-0 mb-7 tab:mb-4 placeholder:text-sm13 placeholder:pc:text-lg13 pc:text-2xl13 block w-full bg-transparent border-0 pb-4 tab:pb-[10px] pc:pb-7 tab:pt-[15px] pc:pt-[29px] pl-[18px] pr-4 tab:pl-7 pc:pl-[52px] font-exo placeholder:uppercase font-semibold text-title placeholder:text-text group-focus:outline-none focus:ring-0";
+    "mt-6 tab:mt-0 mb-7 tab:mb-4 placeholder:text-sm13 block w-full bg-transparent border-0 pb-4 tab:pb-[10px] tab:pt-[15px] pl-[18px] pr-4 tab:pl-7 font-exo placeholder:uppercase font-semibold text-title placeholder:text-text group-focus:outline-none focus:ring-0";
 
   return (
     <>
