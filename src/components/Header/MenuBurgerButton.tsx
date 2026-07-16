@@ -1,6 +1,6 @@
-import { IconClose } from "../Icons/IconClose";
-import { IconEmpty } from "../Icons/IconEmpty";
-import { IconMenu } from "../Icons/IconMenu";
+import { IconClose } from "../shared/Icons/IconClose";
+import { IconEmpty } from "../shared/Icons/IconEmpty";
+import { IconMenu } from "../shared/Icons/IconMenu";
 
 interface MenuBurgerButtonProps {
   isHeaderMenuOpened: boolean;

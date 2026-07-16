@@ -3,9 +3,9 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { ReactNode, useEffect } from "react";
 
-import { IconClose } from "@/components/Icons/IconClose";
-import { IconEmpty } from "@/components/Icons/IconEmpty";
-import { IconLogo } from "@/components/Icons/IconLogo";
+import { IconClose } from "@/components/shared/Icons/IconClose";
+import { IconEmpty } from "@/components/shared/Icons/IconEmpty";
+import { IconLogo } from "@/components/shared/Icons/IconLogo";
 
 import { Portal } from "./Portal";
 // type AnimationPhase = "enter" | "exit";

@@ -1,5 +1,7 @@
 import { useTranslations } from "next-intl";
 
+import { ProjectType } from "../shared/SliderGallery";
+
 export const getServicesList = (t: ReturnType<typeof useTranslations>) => [
   {
     title: t("specializationItemTitle1"),
@@ -35,4 +37,19 @@ export const trustedList = [
   "/images/emblem2.png",
   "/images/emblem3.png",
   "/images/emblem4.png",
+];
+
+export const projectsGallery = (
+  t: ReturnType<typeof useTranslations>
+): ProjectType => [
+  { title: t("slide1Title"), imageURL: "/images/slide1.jpg" },
+  { title: t("slide2Title"), videoURL: "/videos/working-team.mp4" },
+  { title: t("slide3Title"), imageURL: "/images/image4.jpg" },
+  { title: t("slide4Title"), videoURL: "/videos/training-ground.mp4" },
+  { title: "Hammer 10", videoURL: "/videos/hammer-10-1.mp4" },
+  { title: "Hammer 10", videoURL: "/videos/hammer-10-2.mp4" },
+  { title: "Hammer 10", videoURL: "/videos/hammer-10-3.mp4" },
+  { title: "Hammer 10", videoURL: "/videos/hammer-10-4.mp4" },
+  { title: "Hammer 13", videoURL: "/videos/hammer-13-1.mp4" },
+  { title: "Vulcan 10", videoURL: "/videos/vulcan-10-1.mp4" },
 ];

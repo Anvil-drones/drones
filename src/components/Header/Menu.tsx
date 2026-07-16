@@ -8,10 +8,10 @@ import ScrambleText from "../shared/ScrambleText";
 
 export const Menu = ({
   className,
-  onClick,
+  onClickAction,
 }: {
   className?: string;
-  onClick?: () => void;
+  onClickAction?: () => void;
 }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const t = useTranslations("Menu");
@@ -28,7 +28,7 @@ export const Menu = ({
   const pathname = usePathname();
 
   const handleLinkClick = (id: string) => {
-    if (onClick) onClick();
+    if (onClickAction) onClickAction();
     if (pathname === "/" && id === "/") {
       return;
     }
@@ -73,7 +73,7 @@ export const Menu = ({
               </button>
             ) : (
               <CatalogLinkButton
-                onClick={onClick}
+                onClickAction={onClickAction}
                 text={content.name}
                 locale={locale}
                 link={content.path}

@@ -3,8 +3,8 @@ import { useLocale, useTranslations } from "next-intl";
 
 import { selectedLink } from "@/utils/selectedLink";
 
-import { IconArrowsDown } from "./Icons/IconArrowsDown";
-import { Union } from "./Icons/Union";
+import { IconArrowsDown } from "./shared/Icons/IconArrowsDown";
+import { Union } from "./shared/Icons/Union";
 import LoopFadeMotionText from "./shared/LoopFadeMotionText";
 import { VacancyModalWrapper } from "./VacancyModalWrapper";
 

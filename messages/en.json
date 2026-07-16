@@ -106,7 +106,11 @@
     "pinDoc": "Attach file (PDF/DOC)",
     "notFound": "404 Page not found",
     "trustedTitle": "Trusted by Ukraine's Defenders",
-    "trustedDescription": "ANVIL unmanned aerial systems are used by combat brigades of the Armed Forces of Ukraine, special units, and government institutions that choose reliable Ukrainian FPV drones for the most challenging tactical operations."
+    "trustedDescription": "ANVIL unmanned aerial systems are used by combat brigades of the Armed Forces of Ukraine, special units, and government institutions that choose reliable Ukrainian FPV drones for the most challenging tactical operations.",
+    "orderFull": "Request a Consultation",
+    "order": "Request",
+    "catalogTitle": "Catalog",
+    "orderFormTitle": "Request a consultation\nwith an ANVIL\ntechnical expert"
   },
   "Menu": {
     "about": "About us",

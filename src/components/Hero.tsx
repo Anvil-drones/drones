@@ -1,8 +1,8 @@
 import { useTranslations } from "next-intl";
 
-import { BgRectangle } from "./Icons/BgRectangle";
-import { BgScene } from "./Icons/BgScene";
-import { IconText } from "./Icons/IconText";
+import { BgRectangle } from "./shared/Icons/BgRectangle";
+import { BgScene } from "./shared/Icons/BgScene";
+import { IconText } from "./shared/Icons/IconText";
 import { ListStyleTypeFourSquare } from "./shared/ListStyleTypeFourSquare";
 import { ConsultationModal } from "./shared/Modal/СonsultationModal";
 

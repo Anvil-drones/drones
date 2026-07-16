@@ -1,6 +1,6 @@
 "use client";
-import { IconEmpty } from "../Icons/IconEmpty";
-import { IconUp } from "../Icons/IconUp";
+import { IconEmpty } from "./Icons/IconEmpty";
+import { IconUp } from "./Icons/IconUp";
 
 export const UpToTopStatic = ({ className }: { className?: string }) => {
   return (

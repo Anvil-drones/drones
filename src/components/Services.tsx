@@ -2,7 +2,7 @@ import { useTranslations } from "next-intl";
 
 import { Accordion } from "./Accordion/Accordion";
 import { getServicesList } from "./assets/dataLists";
-import { Union } from "./Icons/Union";
+import { Union } from "./shared/Icons/Union";
 import { Trusted } from "./Trusted";
 
 export const Services = () => {
@@ -14,12 +14,21 @@ export const Services = () => {
       id="services"
       className="mt-[-30px] tab:mt-[-50px] relative pb-[90px] tab:pb-[50px] clip-path-down-cut-mobile-service tab:clip-path-down-cut-tab-service"
     >
-      <div className="absolute inset-0 z-[-1] overflow-hidden">
+      <div className="absolute inset-0 z-[-2] overflow-hidden">
         <div
           className="w-full h-full "
           style={{
             backgroundImage: "url('/bg/noise.svg')",
             backgroundPosition: "top center",
+          }}
+        />
+      </div>{" "}
+      <div className="absolute inset-0 z-[-1] overflow-hidden">
+        <div
+          className="w-full h-full "
+          style={{
+            backgroundImage: "url('/bg/gradient.png')",
+            backgroundPosition: "bottom center",
           }}
         />
       </div>

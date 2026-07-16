@@ -1,7 +1,13 @@
+import { CatalogMain } from "@/components/CatalogPage/CatalogMain";
+import { CatalogOrder } from "@/components/CatalogPage/CatalogOrder";
+import { Gallery } from "@/components/Gallery";
+
 export default function CatalogPage() {
   return (
-    <div>
-      <h1>Catalog Page</h1>
-    </div>
+    <>
+      <CatalogMain />
+      <CatalogOrder />
+      <Gallery catalog />
+    </>
   );
 }

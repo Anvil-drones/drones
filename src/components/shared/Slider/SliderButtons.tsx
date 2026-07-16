@@ -6,8 +6,8 @@ import React, {
   useState,
 } from "react";
 
-import { IconEmpty } from "@/components/Icons/IconEmpty";
-import { IconUp } from "@/components/Icons/IconUp";
+import { IconEmpty } from "@/components/shared/Icons/IconEmpty";
+import { IconUp } from "@/components/shared/Icons/IconUp";
 
 type UsePrevNextButtonsType = {
   prevBtnDisabled: boolean;

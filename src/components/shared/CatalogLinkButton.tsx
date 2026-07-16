@@ -10,13 +10,13 @@ export const CatalogLinkButton = ({
   text,
   locale,
   link,
-  onClick,
+  onClickAction,
   className,
 }: {
   text: string;
   locale: string;
   link: string;
-  onClick?: () => void;
+  onClickAction?: () => void;
   className?: string;
 }) => {
   const [hovered, setHovered] = useState(false);
@@ -29,7 +29,7 @@ export const CatalogLinkButton = ({
     >
       <Link
         href={link}
-        onClick={onClick}
+        onClick={onClickAction}
         className="flex items-center justify-center cursor-pointer group-hover:text-hoverAccent group-hover:bg-radial-green-100 text-title bg-title20 border border-title20 group-hover:border-accent/20 w-[288px] h-full uppercase font-bold text-base transition-all duration-300 ease-in-out"
       >
         <ScrambleText text={text} locale={locale} animate={hovered} />

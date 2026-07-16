@@ -7,7 +7,7 @@ export const ErrorMessage = () => {
     <div className="relative z-[-1] overflow-hidden w-screen h-screen">
       <div className="absolute inset-0 z-[-2] w-screen h-screen">
         <Image
-          src="/bg/kolo.svg"
+          src="/bg/circle1.png"
           alt="circle decor"
           width={2000}
           height={2000}
