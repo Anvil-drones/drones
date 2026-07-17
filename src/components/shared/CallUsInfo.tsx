@@ -7,7 +7,7 @@ export const CallUsInfo = ({ footer }: { footer?: boolean }) => {
   return (
     <div className="flex flex-col items-center justify-center gap-[18px] tab:gap-8">
       <h3
-        className={`${footer ? "text-title pc:ml-12" : "text-text"} text-sm1 uppercase pc:text-base`}
+        className={`${footer ? "text-title pc:-ml-4" : "text-text"} text-sm1 uppercase pc:text-base`}
       >
         {t("callUs")}
       </h3>

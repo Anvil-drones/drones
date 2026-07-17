@@ -9,9 +9,11 @@ import ScrambleText from "../shared/ScrambleText";
 export const Menu = ({
   className,
   onClickAction,
+  footer,
 }: {
   className?: string;
   onClickAction?: () => void;
+  footer?: boolean;
 }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const t = useTranslations("Menu");
@@ -24,6 +26,14 @@ export const Menu = ({
     { type: "button", name: t("vacancy"), path: "#vacancy" },
     { type: "link", name: t("catalog"), path: "/catalog" },
   ];
+  const menuListFooter = [
+    { type: "button", name: t("about"), path: "/" },
+    { type: "button", name: t("services"), path: "#services" },
+    { type: "button", name: t("vacancy"), path: "#vacancy" },
+    { type: "button", name: t("catalog"), path: "/catalog" },
+  ];
+
+  const menu = footer ? menuListFooter : menuList;
   const router = useRouter();
   const pathname = usePathname();
 
@@ -35,6 +45,10 @@ export const Menu = ({
 
     if (pathname !== "/") {
       router.push(`/${id}`);
+      return;
+    }
+    if (id === "/catalog") {
+      router.push("catalog");
       return;
     }
 
@@ -50,7 +64,7 @@ export const Menu = ({
 
   return (
     <ul className={`${className} `}>
-      {menuList.map((content, idx) => {
+      {menu.map((content, idx) => {
         return (
           <li
             key={idx}

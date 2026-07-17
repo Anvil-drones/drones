@@ -659,8 +659,9 @@ export const dronesList: Drone[] = [
         },
         {
           label: "Час польоту",
-          value: "до 20 хв",
+          value: "до 30 хв",
         },
+        { label: "Максимальна швидкість", value: "300 км" },
       ],
 
       equipment: [
@@ -692,6 +693,7 @@ export const dronesList: Drone[] = [
           label: "Камера",
           value: "Caddx Ratel Pro V2 / Caddx 640",
         },
+        { label: "Система навігації", value: "Sine.Link" },
         {
           label: "Антена відео",
           value: "Антена «Конюшина» 5.8/6.2 ГГц кругової поляризації",
@@ -718,8 +720,9 @@ export const dronesList: Drone[] = [
         },
         {
           label: "Flight time",
-          value: "Up to 20 min",
+          value: "Up to 30 min",
         },
+        { label: "Maximum speed", value: "300 Km" },
       ],
 
       equipment: [
@@ -751,6 +754,8 @@ export const dronesList: Drone[] = [
           label: "Camera",
           value: "Caddx Ratel Pro V2 / Caddx 640",
         },
+        { label: "Navigation system", value: "Sine.Link" },
+
         {
           label: "Video antenna",
           value: "5.8/6.2 GHz Clover circular polarization antenna",
@@ -764,7 +769,7 @@ export const dronesList: Drone[] = [
   },
   {
     slug: "vulcan-10-c",
-    type: "fpv-cargo",
+    type: "interceptor",
     images: [
       "/images/catalog/vulcan-10-c/1.jpg",
       "/images/catalog/vulcan-10-c/2.jpg",
@@ -773,7 +778,7 @@ export const dronesList: Drone[] = [
 
     uk: {
       title: "БПЛА “VULCAN 10 Ц”",
-      subtitle: "10-дюймовий FPV дрон",
+      subtitle: "10-дюймовий FPV дрон-перехоплювач",
 
       features: [
         {
@@ -832,7 +837,7 @@ export const dronesList: Drone[] = [
 
     en: {
       title: "UAV “VULCAN 10 C”",
-      subtitle: "10-inch FPV drone",
+      subtitle: "10-inch FPV interceptor drone",
 
       features: [
         {
@@ -896,7 +901,7 @@ export const filterCatalogList = (
 ): DroneFilter[] => [
   { name: t("catalogFilterAll"), type: "all" },
   { name: t("catalogFilter1"), type: "fpv-opt" },
-  { name: t("catalogFilter2"), type: "fpv-cargo" },
+  // { name: t("catalogFilter2"), type: "fpv-cargo" },
   { name: t("catalogFilter3"), type: "fpv-radio" },
   { name: t("catalogFilter4"), type: "interceptor" },
 ];

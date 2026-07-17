@@ -11,13 +11,13 @@ export const IconBullet = ({ className }: IconProps) => {
       className={className}
       aria-label="bullet icon"
     >
-      <g clip-path="url(#clip0_1033_1276)">
+      <g clipPath="url(#clip0_1033_1276)">
         <path
           d="M0 4.93945L6.09601 8.45945L0 11.9795V4.93945Z"
           stroke="#13D12F"
-          stroke-width="0.5"
-          stroke-miterlimit="10"
-          stroke-linecap="round"
+          strokeWidth="0.5"
+          strokeMiterlimit="10"
+          strokeLinecap="round"
         />
       </g>
       <defs>

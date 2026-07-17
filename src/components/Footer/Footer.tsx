@@ -54,9 +54,12 @@ export const Footer = () => {
           {t("slogan")}
         </p>
         <div className="mb-12 tab:mb-[104px] tab:flex tab:justify-between pc:mb-[56px]">
-          <Menu className="hidden tab:flex tab:flex-col tab:justify-between pc:w-[366px] pc:flex-row pc:justify-between" />
+          <Menu
+            footer
+            className="hidden tab:flex tab:flex-col tab:justify-between pc:-ml-4 pc:w-[439px] pc:flex-row pc:justify-between"
+          />
           <CallUsInfo footer />
-          <SocialLinks className="mb-8 mt-6 tab:my-0 tab:flex-col tab:text-sm1 pc:mr-[103px] pc:w-[308px] pc:flex-row pc:text-base" />
+          <SocialLinks className="mb-8 mt-6 tab:my-0 tab:flex-col tab:text-sm1 pc:mr-[103px] pc:w-[308px] pc:flex-row pc:items-center pc:justify-start pc:text-base" />
         </div>
         <div className="justify-between text-center text-sm1 uppercase tab:flex tab:text-left pc:items-baseline">
           <div className="mb-7 w-full tab:w-1/2 pc:w-1/3">
