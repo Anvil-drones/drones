@@ -29,7 +29,7 @@ export const VacancyModalWrapper = () => {
       <VacancyForm notificationHandler={notificationHandler} />
 
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
-        <div className="w-[90%] min-w-[288px] h-auto max-w-[600px]">
+        <div className="h-auto w-[90%] min-w-[288px] max-w-[600px]">
           {modalContent}
         </div>
       </Modal>

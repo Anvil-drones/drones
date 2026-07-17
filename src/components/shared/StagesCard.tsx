@@ -13,19 +13,19 @@ export const StagesCard = ({
 }) => {
   return (
     <div
-      className={`${className} relative p-4 pc:p-8 w-[288px] h-[165px] tab:w-[350px] pc:w-[394px] tab:h-[170px] pc:h-[210px] bg-[url('/bg/rectangle2.svg')] bg-no-repeat bg-center bg-cover `}
+      className={`${className} relative h-[165px] w-[288px] bg-[url('/bg/rectangle2.svg')] bg-cover bg-center bg-no-repeat p-4 tab:h-[170px] tab:w-[350px] pc:h-[210px] pc:w-[394px] pc:p-8`}
     >
       <div
-        className={`flex gap-4 items-center mb-4 pc:justify-between ${index === 2 ? "pc:gap-[161px]" : "pc:gap-[125px]"} `}
+        className={`mb-4 flex items-center gap-4 pc:justify-between ${index === 2 ? "pc:gap-[161px]" : "pc:gap-[125px]"} `}
       >
-        <span className="w-6 h-6 font-exo font-semibold uppercase flex items-center justify-center">
+        <span className="flex h-6 w-6 items-center justify-center font-exo font-semibold uppercase">
           0{index + 1}
         </span>
-        <div className=" flex gap-2 items-center">
+        <div className="flex items-center gap-2">
           <div>
             <ThreeSquares />
           </div>
-          <h4 className=" font-exo font-semibold uppercase text-title pc:text-lg">
+          <h4 className="font-exo font-semibold uppercase text-title pc:text-lg">
             {title}
           </h4>
         </div>

@@ -94,9 +94,9 @@ export const VacancyForm = ({ notificationHandler }: FormInModalProps) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className=" max-w-[684px] w-full mx-auto text-left"
+      className="mx-auto w-full max-w-[684px] text-left"
     >
-      <div className=" relative group">
+      <div className="group relative">
         <label htmlFor="name"></label>
         <input
           type="text"
@@ -106,15 +106,15 @@ export const VacancyForm = ({ notificationHandler }: FormInModalProps) => {
           onChange={e => setFormData({ ...formData, name: e.target.value })}
           className={`${inputClass} `}
         />
-        <div className="absolute bottom-0 left-0 w-full h-3 border border-t-0 border-text group-focus:border-title transition-all duration-500 ease-in" />
+        <div className="absolute bottom-0 left-0 h-3 w-full border border-t-0 border-text transition-all duration-500 ease-in group-focus:border-title" />
         {errors.name && (
-          <p className="absolute bottom-[-16px] left-0 text-error mt-1">
+          <p className="absolute bottom-[-16px] left-0 mt-1 text-error">
             {errors.name}
           </p>
         )}
       </div>
 
-      <div className=" relative group">
+      <div className="group relative">
         <label htmlFor="email"></label>
         <input
           type="email"
@@ -124,16 +124,16 @@ export const VacancyForm = ({ notificationHandler }: FormInModalProps) => {
           onChange={e => setFormData({ ...formData, email: e.target.value })}
           className={`${inputClass}`}
         />
-        <div className="absolute bottom-0 left-0 w-full h-3 border border-t-0 border-text group-focus:border-title transition-all duration-500 ease-in" />
+        <div className="absolute bottom-0 left-0 h-3 w-full border border-t-0 border-text transition-all duration-500 ease-in group-focus:border-title" />
 
         {errors.email && (
-          <p className=" absolute bottom-[-16px] left-0 text-error mt-1">
+          <p className="absolute bottom-[-16px] left-0 mt-1 text-error">
             {errors.email}
           </p>
         )}
       </div>
 
-      <div className=" relative group">
+      <div className="group relative">
         <label htmlFor="phone"></label>
         <input
           type="tel"
@@ -143,10 +143,10 @@ export const VacancyForm = ({ notificationHandler }: FormInModalProps) => {
           onChange={e => setFormData({ ...formData, phone: e.target.value })}
           className={`${inputClass}`}
         />
-        <div className="absolute bottom-0 left-0 w-full h-3 border border-t-0 border-text group-focus:border-title transition-all duration-500 ease-in" />
+        <div className="absolute bottom-0 left-0 h-3 w-full border border-t-0 border-text transition-all duration-500 ease-in group-focus:border-title" />
       </div>
 
-      <div className=" relative group">
+      <div className="group relative">
         <label htmlFor="message"></label>
         <textarea
           id="message"
@@ -156,17 +156,17 @@ export const VacancyForm = ({ notificationHandler }: FormInModalProps) => {
           onChange={e => setFormData({ ...formData, message: e.target.value })}
           className={`${inputClass}`}
         />
-        <div className="absolute bottom-0 left-0 w-full h-3 border border-t-0 border-text group-focus:border-title transition-all duration-500 ease-in" />
+        <div className="absolute bottom-0 left-0 h-3 w-full border border-t-0 border-text transition-all duration-500 ease-in group-focus:border-title" />
 
         {errors.message && (
-          <p className="absolute bottom-[-16px] left-0 text-error mt-1">
+          <p className="absolute bottom-[-16px] left-0 mt-1 text-error">
             {errors.message}
           </p>
         )}
       </div>
-      <div className="flex gap-2 text-sm13 mb-10 tab:hidden">
+      <div className="mb-10 flex gap-2 text-sm13 tab:hidden">
         <div>
-          <span className="block w-2 h-2 bg-accent mt-1"></span>
+          <span className="mt-1 block h-2 w-2 bg-accent"></span>
         </div>
         <p>
           {t.rich("policyAccept", {
@@ -175,7 +175,7 @@ export const VacancyForm = ({ notificationHandler }: FormInModalProps) => {
                 href={selectedLink(locale)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline font-semibold"
+                className="font-semibold underline"
               >
                 {chunk}
               </a>
@@ -184,7 +184,7 @@ export const VacancyForm = ({ notificationHandler }: FormInModalProps) => {
         </p>
       </div>
 
-      <div className="flex justify-center tab:mt-[53px] pc:mt-[72px] tab:justify-start">
+      <div className="flex justify-center tab:mt-[53px] tab:justify-start pc:mt-[72px]">
         <Button text={tButton("joinUs")} joinUs />
       </div>
     </form>

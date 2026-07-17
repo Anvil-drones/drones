@@ -50,12 +50,12 @@ export default function ModelScroller() {
 
   return (
     <div
-      className="hidden pc:block pointer-events-none fixed top-[208px] tab:top-[210px] pc:top-[260px]  left-0 w-full z-[5]"
+      className="pointer-events-none fixed left-0 top-[208px] z-[5] hidden w-full tab:top-[210px] pc:top-[260px] pc:block"
       style={{
         transform: `translateY(${translateY}px)`,
       }}
     >
-      <div className="w-full max-w-[580px] tab:max-w-[700px] pc:max-w-[900px] mx-auto aspect-[288/170] tab:aspect-[258/170]">
+      <div className="mx-auto aspect-[288/170] w-full max-w-[580px] tab:aspect-[258/170] tab:max-w-[700px] pc:max-w-[900px]">
         <ModelViewer />
       </div>
     </div>

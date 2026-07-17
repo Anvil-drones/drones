@@ -15,20 +15,17 @@ export const CatalogMain = () => {
       : dronesList;
 
   return (
-    <section
-      className="pt-10 pb-[88px] relative bg-blackCustom clip-path-down-cut-mobile
-    tab:pt-[56px] pc:pt-[60px] tab:pb-[162px] pc:pb-[110px] tab:clip-path-down-cut-tab"
-    >
-      <div className="relative px-4 tab:px-5 pc:px-[60px] max-w-[540px] tab:max-w-full pc:max-w-[1440px] mx-auto">
-        <h1 className="uppercase font-exo font-semibold text-3xl tab:text-4xl pc:text-5xl text-title mb-6 tab:mb-8 pc:mb-[62px]">
+    <section className="relative bg-blackCustom pb-[88px] pt-10 clip-path-down-cut-mobile tab:pb-[162px] tab:pt-[56px] tab:clip-path-down-cut-tab pc:pb-[110px] pc:pt-[60px]">
+      <div className="relative mx-auto max-w-[540px] px-4 tab:max-w-full tab:px-5 pc:max-w-[1440px] pc:px-[60px]">
+        <h1 className="mb-6 font-exo text-3xl font-semibold uppercase text-title tab:mb-8 tab:text-4xl pc:mb-[62px] pc:text-5xl">
           {t("catalogTitle")}
         </h1>
-        <ul className="flex  gap-1 tab:gap-2 mb-6 tab:mb-[50px] pc:mb-[60px] overflow-x-auto">
+        <ul className="mb-6 flex gap-1 overflow-x-auto tab:mb-[50px] tab:gap-2 pc:mb-[60px]">
           {filterCatalogList(t).map(item => (
             <li
               key={item.type}
               onClick={() => setActiveFilter(item.type)}
-              className={`p-3 w-fit whitespace-nowrap border ${activeFilter === item.type ? "bg-title text-black33 transition-colors duration-300 border-blackCustom/45" : "bg-transparent text-text border-text"}`}
+              className={`w-fit whitespace-nowrap border p-3 ${activeFilter === item.type ? "border-blackCustom/45 bg-title text-black33 transition-colors duration-300" : "border-text bg-transparent text-text"}`}
             >
               {item.name}
             </li>
@@ -36,12 +33,12 @@ export const CatalogMain = () => {
         </ul>
       </div>
 
-      <ul className="flex flex-col gap-6 tab:gap-8 pc:gap-10 tab:px-5 pc:px-[60px] max-w-[540px] tab:max-w-full pc:max-w-[1440px] mx-auto">
+      <ul className="mx-auto flex max-w-[540px] flex-col gap-6 tab:max-w-full tab:gap-8 tab:px-5 pc:max-w-[1440px] pc:gap-10 pc:px-[60px]">
         {filteredDroneList.map(drone => {
           return (
             <li
               key={drone.slug}
-              className="py-4 tab:py-0 tab:pb-8 pc:pb-10 border-b border-text/50"
+              className="border-b border-text/50 py-4 tab:py-0 tab:pb-8 pc:pb-10"
             >
               <CatalogCardMob item={drone} />
               <CatalogCard item={drone} />

@@ -70,12 +70,12 @@ export const PrevButton: React.FC<ButtonType> = props => {
     <button
       disabled={disabled}
       aria-label="show previous slide button"
-      className="flex justify-center items-center w-10 tab:w-11 pc:w-12 h-10 tab:h-11 pc:h-12 relative bg-transparent hover:bg-radial-green-button transition-all duration-300 ease-out hover:text-accent"
+      className="relative flex h-10 w-10 items-center justify-center bg-transparent transition-all duration-300 ease-out hover:bg-radial-green-button hover:text-accent tab:h-11 tab:w-11 pc:h-12 pc:w-12"
       type="button"
       {...restProps}
     >
-      <IconEmpty className="w-10 tab:w-11 pc:w-12 h-10 tab:h-11 pc:h-12" />
-      <IconUp className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-90" />
+      <IconEmpty className="h-10 w-10 tab:h-11 tab:w-11 pc:h-12 pc:w-12" />
+      <IconUp className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-90" />
     </button>
   );
 };
@@ -87,12 +87,12 @@ export const NextButton: React.FC<ButtonType> = props => {
     <button
       disabled={disabled}
       aria-label="show next slide button"
-      className="flex justify-center items-center w-10 tab:w-11 pc:w-12 h-10 tab:h-11 pc:h-12 relative bg-transparent hover:bg-radial-green-button transition-all duration-300 ease-out hover:text-accent"
+      className="relative flex h-10 w-10 items-center justify-center bg-transparent transition-all duration-300 ease-out hover:bg-radial-green-button hover:text-accent tab:h-11 tab:w-11 pc:h-12 pc:w-12"
       type="button"
       {...restProps}
     >
-      <IconEmpty className="w-10 tab:w-11 pc:w-12 h-10 tab:h-11 pc:h-12" />
-      <IconUp className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-90" />
+      <IconEmpty className="h-10 w-10 tab:h-11 tab:w-11 pc:h-12 pc:w-12" />
+      <IconUp className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rotate-90" />
     </button>
   );
 };

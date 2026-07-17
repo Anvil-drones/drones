@@ -13,7 +13,7 @@ export const SliderSquareBox = <T,>({
   onDotButtonClick,
 }: SliderDotsBoxProps & { sliders: T[] }) => {
   return (
-    <div className="tab:hidden flex gap-[6px] items-center">
+    <div className="flex items-center gap-[6px] tab:hidden">
       {scrollSnaps.map((_, index) => (
         <SliderDots
           key={index}
@@ -36,9 +36,7 @@ export const SliderSquareBox = <T,>({
           onClick={() => onDotButtonClick(index)}
           className={`slider-dot ${
             index === selectedIndex ? "slider-dot--selected" : ""
-          } 
-                ${index > selectedIndex + 1 || index < selectedIndex - 1 ? "hidden" : ""} 
-               `}
+          } ${index > selectedIndex + 1 || index < selectedIndex - 1 ? "hidden" : ""} `}
         />
       ))}
     </div>

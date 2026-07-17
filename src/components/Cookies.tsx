@@ -42,14 +42,14 @@ export const CookiesComponent = () => {
     <div
       className={`${
         isVisible ? "h-[363px]" : "h-0"
-      } bg-blackCustom w-full max-w-[388px] transition-[height] duration-[1000ms] overflow-hidden fixed z-[11] bottom-12 right-1/2 translate-x-1/2 tab:right-12 tab:translate-x-0 `}
+      } fixed bottom-12 right-1/2 z-[11] w-full max-w-[388px] translate-x-1/2 overflow-hidden bg-blackCustom transition-[height] duration-[1000ms] tab:right-12 tab:translate-x-0`}
     >
-      <div className=" relative p-4 tab:p-12 flex flex-col items-center justify-center mx-auto border border-accent ">
-        <div className="ml-0 mr-auto mt-8 tab:mt-0 mb-2">
+      <div className="relative mx-auto flex flex-col items-center justify-center border border-accent p-4 tab:p-12">
+        <div className="mb-2 ml-0 mr-auto mt-8 tab:mt-0">
           <IconCookies />
         </div>
         <div className="mx-auto mb-9">
-          <h2 className="font-exo font-semibold text-3xl text-title mb-6">
+          <h2 className="mb-6 font-exo text-3xl font-semibold text-title">
             {t("title")}
           </h2>
           <p className="text-sm12">
@@ -59,7 +59,7 @@ export const CookiesComponent = () => {
                   href={selectedLink(locale)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="cursor-pointer underline font-bold"
+                  className="cursor-pointer font-bold underline"
                 >
                   {chunk}
                 </a>
@@ -68,27 +68,27 @@ export const CookiesComponent = () => {
           </p>
         </div>
 
-        <div className="flex gap-4 justify-between w-full ">
+        <div className="flex w-full justify-between gap-4">
           <button
             onClick={handleReject}
-            className="w-[130px] h-12 flex justify-center items-center uppercase font-bold text-white border border-white"
+            className="flex h-12 w-[130px] items-center justify-center border border-white font-bold uppercase text-white"
           >
             {tButton("reject")}
           </button>
           <button
             onClick={handleAccept}
-            className="w-[130px] h-12 flex justify-center items-center uppercase font-bold text-accent border border-accent"
+            className="flex h-12 w-[130px] items-center justify-center border border-accent font-bold uppercase text-accent"
           >
             {tButton("accept")}
           </button>
         </div>
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 w-11 h-11 flex justify-center items-center "
+          className="absolute right-4 top-4 flex h-11 w-11 items-center justify-center"
           aria-label="Close modal"
         >
-          <div className="w-9 h-9 flex justify-center items-center text-title hover:bg-radial-green-50 hover:text-hoverAccent">
-            <IconEmpty className="w-9 h-9 " />
+          <div className="flex h-9 w-9 items-center justify-center text-title hover:bg-radial-green-50 hover:text-hoverAccent">
+            <IconEmpty className="h-9 w-9" />
             <IconClose className="absolute" />
           </div>
         </button>

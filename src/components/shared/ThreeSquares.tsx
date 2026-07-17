@@ -1,9 +1,9 @@
 export const ThreeSquares = () => {
   return (
-    <div className="relative w-[10px] h-[10px]">
-      <div className="absolute top-0 left-0 w-1 h-1 bg-accent" />
-      <div className="absolute top-0 right-0 w-1 h-1 bg-accent" />
-      <div className="absolute bottom-0 left-0 w-1 h-1 bg-accent" />
+    <div className="relative h-[10px] w-[10px]">
+      <div className="absolute left-0 top-0 h-1 w-1 bg-accent" />
+      <div className="absolute right-0 top-0 h-1 w-1 bg-accent" />
+      <div className="absolute bottom-0 left-0 h-1 w-1 bg-accent" />
     </div>
   );
 };

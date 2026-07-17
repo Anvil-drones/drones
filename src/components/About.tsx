@@ -15,10 +15,10 @@ export const About = () => {
   ];
 
   return (
-    <section id="about" className="mt-[-30px] tab:mt-[-50px] relative">
+    <section id="about" className="relative mt-[-30px] tab:mt-[-50px]">
       <div className="absolute inset-0 z-[-1] overflow-hidden">
         <div
-          className="w-full h-full bg-no-repeat  "
+          className="h-full w-full bg-no-repeat"
           style={{
             backgroundImage: "url('/bg/web-radial.svg')",
             backgroundSize: "auto 85%",
@@ -31,44 +31,44 @@ export const About = () => {
           src="/bg/bgAbout.jpg"
           alt="decorative background"
           fill
-          className="object-cover filter blur-[60px]"
+          className="object-cover blur-[60px] filter"
           priority
         />
       </div>
-      <Union className="absolute top-[15px] tab:top-[25px] left-1/2 -translate-x-1/2 w-[186px] tab:w-[341px] h-auto z-[2]" />
-      <h3 className="absolute top-[21px] tab:top-[41px] tab:text-base left-1/2 -translate-x-1/2 z-[3] uppercase text-accent">
+      <Union className="absolute left-1/2 top-[15px] z-[2] h-auto w-[186px] -translate-x-1/2 tab:top-[25px] tab:w-[341px]" />
+      <h3 className="absolute left-1/2 top-[21px] z-[3] -translate-x-1/2 uppercase text-accent tab:top-[41px] tab:text-base">
         {t("about")}
       </h3>
-      <div className="px-4 tab:px-[84px] pc:px-[60px] max-w-[540px] tab:max-w-full pc:max-w-[1440px] mx-auto">
-        <div className="pt-[78px] tab:pt-[129px] pc:pt-[113px] flex flex-col">
+      <div className="mx-auto max-w-[540px] px-4 tab:max-w-full tab:px-[84px] pc:max-w-[1440px] pc:px-[60px]">
+        <div className="flex flex-col pt-[78px] tab:pt-[129px] pc:pt-[113px]">
           <div className="">
             <h1
               id="tab-about"
-              className="min-h-[72px] font-exo font-semibold text-2xl tab:text-3xl pc:text-4xl text-title mb-4 tab:mb-6 pc:mb-4 tab:w-[480px] pc:w-[550px] tab:text-center mx-auto"
+              className="mx-auto mb-4 min-h-[72px] font-exo text-2xl font-semibold text-title tab:mb-6 tab:w-[480px] tab:text-center tab:text-3xl pc:mb-4 pc:w-[550px] pc:text-4xl"
             >
               {t("aboutTitle")}
             </h1>
-            <p className="w-[95%] min-h-[56px] tab:w-[474px] text-base12 pc:text-lg12 mx-auto pc:w-[520px] tab:text-center">
+            <p className="mx-auto min-h-[56px] w-[95%] text-base12 tab:w-[474px] tab:text-center pc:w-[520px] pc:text-lg12">
               {t("aboutDescription")}
             </p>
           </div>
 
-          <div className="flex-1 flex items-center justify-center mt-16 pc:mt-36">
-            <div className="relative w-full tab:max-w-[550px] pc:max-w-[748px]  aspect-[288/170] tab:aspect-[258/170] pc:aspect-[220/110]">
-              <BgSceneAbout className="w-full h-auto absolute bottom-[45px] tab:bottom-[40px] pc:bottom-[40px] left-1/2 -translate-x-1/2" />
+          <div className="mt-16 flex flex-1 items-center justify-center pc:mt-36">
+            <div className="relative aspect-[288/170] w-full tab:aspect-[258/170] tab:max-w-[550px] pc:aspect-[220/110] pc:max-w-[748px]">
+              <BgSceneAbout className="absolute bottom-[45px] left-1/2 h-auto w-full -translate-x-1/2 tab:bottom-[40px] pc:bottom-[40px]" />
             </div>
           </div>
         </div>
 
-        <div className="pb-[106px] tab:pb-[129px] pc:pb-[140px] mt-5">
-          <h2 className="text-center mb-9 font-exo text-title text-3xl pc:text-4xl font-semibold">
+        <div className="mt-5 pb-[106px] tab:pb-[129px] pc:pb-[140px]">
+          <h2 className="mb-9 text-center font-exo text-3xl font-semibold text-title pc:text-4xl">
             {t("ourValuesTitle")}
           </h2>
-          <ul className="flex flex-col gap-4 tab:grid tab:grid-cols-2 tab:gap-5 pc:flex pc:flex-row pc:gap-6 pc:justify-center tab:justify-items-center ">
+          <ul className="flex flex-col gap-4 tab:grid tab:grid-cols-2 tab:justify-items-center tab:gap-5 pc:flex pc:flex-row pc:justify-center pc:gap-6">
             {valuesList.map((item, index) => (
               <li
                 key={index}
-                className="mx-auto tab:even:mr-auto pc:even:mr-0 tab:even:ml-0 tab:odd:mr-0 tab:odd:ml-auto pc:odd:ml-0"
+                className="mx-auto tab:odd:ml-auto tab:odd:mr-0 tab:even:ml-0 tab:even:mr-auto pc:odd:ml-0 pc:even:mr-0"
               >
                 <ValueDiv
                   title={item.title}

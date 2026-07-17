@@ -19,11 +19,11 @@ export default function LanguageSwitcher() {
   }, [pathName, searchParams]);
 
   return (
-    <ul className="relative z-10 flex gap-1 uppercase leading-3 pc:text-base tab:leading-[10px] pc:leading-3 pb-1 ">
+    <ul className="relative z-10 flex gap-1 pb-1 uppercase leading-3 tab:leading-[10px] pc:text-base pc:leading-3">
       {locales.map(curLocale => (
         <li
           key={curLocale}
-          className="relative first:after:content-[''] first:after:absolute first:after:top-0 first:after:right-0 first:after:w-px first:after:h-[16px] first:after:bg-current first:pr-[5px]"
+          className="relative first:pr-[5px] first:after:absolute first:after:right-0 first:after:top-0 first:after:h-[16px] first:after:w-px first:after:bg-current first:after:content-['']"
         >
           <Link
             href={{
@@ -36,8 +36,8 @@ export default function LanguageSwitcher() {
             scroll={false}
             className={
               curLocale === locale
-                ? "text-accent hover:text-accent  transition-all duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)]"
-                : "text-title hover:text-accent  transition-all duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)]"
+                ? "text-accent transition-all duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:text-accent"
+                : "text-title transition-all duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:text-accent"
             }
           >
             {curLocale === "uk" ? "ua" : curLocale}

@@ -10,46 +10,46 @@ export const CatalogCard = ({ item }: { item: Drone }) => {
   const t = useTranslations("HomePage");
   const content = item[locale as "uk" | "en"];
   return (
-    <div className="hidden tab:flex tab:gap-5 pc:gap-10 relative px-4 tab:px-0 max-w-[540px] tab:max-w-full mx-auto tab:mx-0">
+    <div className="relative mx-auto hidden max-w-[540px] px-4 tab:mx-0 tab:flex tab:max-w-full tab:gap-5 tab:px-0 pc:gap-10">
       <DroneGallery images={item.images} slug={item.slug} />
       <div className="w-[65%]">
-        <div className="flex gap-2 tab:gap-4 pc:gap-[30px] tab:mb-4 pc:mb-6 items-center">
-          <div className="relative tab:px-2.5 tab:h-[49px] flex items-center justify-center">
-            <h3 className=" whitespace-nowrap text-accent font-semibold text-sm12 tab:text-xl pc:text-2xl uppercase">
+        <div className="flex items-center gap-2 tab:mb-4 tab:gap-4 pc:mb-6 pc:gap-[30px]">
+          <div className="relative flex items-center justify-center tab:h-[49px] tab:px-2.5">
+            <h3 className="whitespace-nowrap text-sm12 font-semibold uppercase text-accent tab:text-xl pc:text-2xl">
               {content.title}
             </h3>
-            <div className="tab:w-2.5 tab:h-[49px] border border-accent border-r-0 absolute top-0 left-0" />{" "}
-            <div className="tab:w-2.5 tab:h-[49px] border border-accent border-l-0 absolute top-0 right-0" />
+            <div className="absolute left-0 top-0 border border-r-0 border-accent tab:h-[49px] tab:w-2.5" />{" "}
+            <div className="absolute right-0 top-0 border border-l-0 border-accent tab:h-[49px] tab:w-2.5" />
           </div>
-          <p className="text-sm1 font-exo font-medium tab:text-xl pc:text-2xl">
+          <p className="font-exo text-sm1 font-medium tab:text-xl pc:text-2xl">
             {content.subtitle}
           </p>
         </div>
-        <h4 className="flex items-center mb-3 font-bold uppercase">
-          <span className="w-2 h-2 bg-accent mr-2 block"></span>
+        <h4 className="mb-3 flex items-center font-bold uppercase">
+          <span className="mr-2 block h-2 w-2 bg-accent"></span>
           {t("features")}
         </h4>
 
-        <ul className="overflow-hidden flex flex-col gap-2 pb-1">
+        <ul className="flex flex-col gap-2 overflow-hidden pb-1">
           {content.features.map(feature => (
             <li
               key={item.slug + feature.label}
-              className="flex gap-5 max-w-[692px]"
+              className="flex max-w-[692px] gap-5"
             >
-              <div className="flex gap-2 w-[40%]">
-                <IconBullet className=" shrink-0" />
+              <div className="flex w-[40%] gap-2">
+                <IconBullet className="shrink-0" />
                 <p className="text-sm12">{feature.label}:</p>
               </div>
-              <p className="text-sm12 font-exo font-semibold w-[58%]">
+              <p className="w-[58%] font-exo text-sm12 font-semibold">
                 {feature.value}
               </p>
             </li>
           ))}
         </ul>
 
-        <div className="w-full h-px bg-text/15 mt-3 mb-3" />
-        <h4 className="flex items-center mb-3 font-bold uppercase">
-          <span className="w-2 h-2 bg-accent mr-2 block"></span>
+        <div className="mb-3 mt-3 h-px w-full bg-text/15" />
+        <h4 className="mb-3 flex items-center font-bold uppercase">
+          <span className="mr-2 block h-2 w-2 bg-accent"></span>
           {t("equipment")}
         </h4>
 
@@ -57,10 +57,10 @@ export const CatalogCard = ({ item }: { item: Drone }) => {
           {content.equipment.map(equipt => (
             <li
               key={item.slug + equipt.label}
-              className="flex gap-5 justify-between items-center px-1 py-1.5 max-w-[692px] odd:bg-black20"
+              className="flex max-w-[692px] items-center justify-between gap-5 px-1 py-1.5 odd:bg-black20"
             >
-              <p className="text-sm12 w-[40%]">{equipt.label}:</p>
-              <p className="text-sm12 font-exo font-semibold w-[58%]">
+              <p className="w-[40%] text-sm12">{equipt.label}:</p>
+              <p className="w-[58%] font-exo text-sm12 font-semibold">
                 {equipt.value}
               </p>
             </li>

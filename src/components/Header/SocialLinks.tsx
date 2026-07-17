@@ -26,7 +26,7 @@ export const SocialLinks = ({ className }: { className?: string }) => {
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
           key={content.name}
-          className="uppercase font-bold text-title"
+          className="font-bold uppercase text-title"
         >
           <a
             href={content.href}

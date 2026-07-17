@@ -77,7 +77,7 @@ export default async function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body
-        className={`${exo.variable} ${robotoMono.variable} antialiased min-h-screen flex flex-col`}
+        className={`${exo.variable} ${robotoMono.variable} flex min-h-screen flex-col antialiased`}
       >
         <NextIntlClientProvider>
           <Header />

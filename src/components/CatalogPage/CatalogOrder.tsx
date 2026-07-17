@@ -9,11 +9,11 @@ export const CatalogOrder = () => {
   return (
     <section
       id="stages"
-      className="mt-[-30px] tab:mt-[-50px] relative pb-[105px] tab:pb-[131px] pc:pb-[179px]"
+      className="relative mt-[-30px] pb-[105px] tab:mt-[-50px] tab:pb-[131px] pc:pb-[179px]"
     >
-      <div className="absolute inset-0 z-[-1] hidden tab:flex overflow-hidden">
+      <div className="absolute inset-0 z-[-1] hidden overflow-hidden tab:flex">
         <div
-          className="w-full h-full bg-no-repeat  "
+          className="h-full w-full bg-no-repeat"
           style={{
             backgroundImage: "url('/bg/web-cub-catalog.svg')",
             backgroundSize: "auto",
@@ -23,21 +23,21 @@ export const CatalogOrder = () => {
       </div>
       <div className="absolute inset-0 z-[-2] overflow-hidden">
         <div
-          className="w-full h-full bg-no-repeat bg-center filter blur-[80px] "
+          className="h-full w-full bg-center bg-no-repeat blur-[80px] filter"
           style={{
             backgroundImage: "url('/bg/bgAbout.jpg')",
             backgroundSize: "cover",
           }}
         />
       </div>
-      <Union className="absolute top-[15px] tab:top-[26.4px] left-1/2 -translate-x-1/2 w-[186px] tab:w-[341px] h-auto z-[2]" />
-      <h3 className="hidden tab:block absolute top-[21px] tab:top-[43px] left-1/2 -translate-x-1/2 z-[3] uppercase text-accent">
+      <Union className="absolute left-1/2 top-[15px] z-[2] h-auto w-[186px] -translate-x-1/2 tab:top-[26.4px] tab:w-[341px]" />
+      <h3 className="absolute left-1/2 top-[21px] z-[3] hidden -translate-x-1/2 uppercase text-accent tab:top-[43px] tab:block">
         {t("orderFull")}
       </h3>
-      <h3 className="tab:hidden absolute top-[21px] tab:top-[43px] left-1/2 -translate-x-1/2 z-[3] uppercase text-accent">
+      <h3 className="absolute left-1/2 top-[21px] z-[3] -translate-x-1/2 uppercase text-accent tab:top-[43px] tab:hidden">
         {t("order")}
       </h3>
-      <div className="mx-auto pt-[68px] tab:pt-[136px] px-4 tab:px-5 pc:px-[60px] max-w-[540px] tab:max-w-full pc:max-w-[1440px]">
+      <div className="mx-auto max-w-[540px] px-4 pt-[68px] tab:max-w-full tab:px-5 tab:pt-[136px] pc:max-w-[1440px] pc:px-[60px]">
         <OrderSection />
       </div>
     </section>

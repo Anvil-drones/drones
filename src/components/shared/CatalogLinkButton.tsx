@@ -25,20 +25,20 @@ export const CatalogLinkButton = ({
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className={`relative max-w-[288px] w-full h-12 pc:h-[56px] group bg-blackCustom ${className}`}
+      className={`group relative h-12 w-full max-w-[288px] bg-blackCustom pc:h-[56px] ${className}`}
     >
       <Link
         href={link}
         onClick={onClickAction}
-        className="flex items-center justify-center cursor-pointer group-hover:text-hoverAccent group-hover:bg-radial-green-100 text-title bg-title20 border border-title20 group-hover:border-accent/20 w-[288px] h-full uppercase font-bold text-base transition-all duration-300 ease-in-out"
+        className="flex h-full w-[288px] cursor-pointer items-center justify-center border border-title20 bg-title20 text-base font-bold uppercase text-title transition-all duration-300 ease-in-out group-hover:border-accent/20 group-hover:bg-radial-green-100 group-hover:text-hoverAccent"
       >
         <ScrambleText text={text} locale={locale} animate={hovered} />
       </Link>
 
-      <div className="w-3 h-3 border-t-[2px] border-l-[2px] border-title group-hover:border-accent transition-all duration-300 absolute top-0 left-0" />
-      <div className="w-3 h-3 border-t-[2px] border-r-[2px] border-title group-hover:border-accent transition-all duration-300 absolute top-0 right-0" />
-      <div className="w-3 h-3 border-b-[2px] border-r-[2px] border-title group-hover:border-accent transition-all duration-300 absolute bottom-0 right-0" />
-      <div className="w-3 h-3 border-b-[2px] border-l-[2px] border-title group-hover:border-accent transition-all duration-300 absolute bottom-0 left-0" />
+      <div className="absolute left-0 top-0 h-3 w-3 border-l-[2px] border-t-[2px] border-title transition-all duration-300 group-hover:border-accent" />
+      <div className="absolute right-0 top-0 h-3 w-3 border-r-[2px] border-t-[2px] border-title transition-all duration-300 group-hover:border-accent" />
+      <div className="absolute bottom-0 right-0 h-3 w-3 border-b-[2px] border-r-[2px] border-title transition-all duration-300 group-hover:border-accent" />
+      <div className="absolute bottom-0 left-0 h-3 w-3 border-b-[2px] border-l-[2px] border-title transition-all duration-300 group-hover:border-accent" />
     </div>
   );
 };

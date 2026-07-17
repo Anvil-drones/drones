@@ -23,7 +23,7 @@ export const Footer = () => {
           alt="circle decor"
           width={800}
           height={800}
-          className="tab:hidden absolute top-6 pc:top-4 left-1/2 -translate-x-1/2 w-[110vw] max-w-none h-auto"
+          className="absolute left-1/2 top-6 h-auto w-[110vw] max-w-none -translate-x-1/2 tab:hidden pc:top-4"
           loading="lazy"
         />
         <Image
@@ -31,65 +31,65 @@ export const Footer = () => {
           alt="circle decor"
           width={1675}
           height={747}
-          className="hidden tab:block absolute top-6 pc:top-4 left-1/2 -translate-x-1/2 w-[120vw] max-w-none h-auto"
+          className="absolute left-1/2 top-6 hidden h-auto w-[120vw] max-w-none -translate-x-1/2 tab:block pc:top-4"
           loading="lazy"
         />
       </div>
 
       <div className="absolute inset-0 z-[-2] overflow-hidden">
         <div
-          className="w-full h-full"
+          className="h-full w-full"
           style={{
             backgroundImage: "url('/bg/noise.svg')",
             backgroundPosition: "top center",
           }}
         />
       </div>
-      <div className="w-[70%] min-w-[288px] max-w-[540px] tab:max-w-[631px] pc:max-w-[771px] mx-auto -mt-3 tab:mt-0">
+      <div className="mx-auto -mt-3 w-[70%] min-w-[288px] max-w-[540px] tab:mt-0 tab:max-w-[631px] pc:max-w-[771px]">
         <ModelViewerFooter />
       </div>
-      <div className="px-4 tab:px-5 pc:px-[60px] max-w-[540px] tab:max-w-full pc:max-w-[1440px] mx-auto">
-        <IconLogo className="mx-auto w-[200px] tab:w-[246px] pc:w-[305px] h-auto mb-px" />
-        <p className="text-sm1 pc:text-base13 text-title font-exo font-semibold leading-[10px] uppercase text-center mb-8 tab:mb-[52px] pc:mb-[65px]">
+      <div className="mx-auto max-w-[540px] px-4 tab:max-w-full tab:px-5 pc:max-w-[1440px] pc:px-[60px]">
+        <IconLogo className="mx-auto mb-px h-auto w-[200px] tab:w-[246px] pc:w-[305px]" />
+        <p className="mb-8 text-center font-exo text-sm1 font-semibold uppercase leading-[10px] text-title tab:mb-[52px] pc:mb-[65px] pc:text-base13">
           {t("slogan")}
         </p>
-        <div className="tab:flex tab:justify-between mb-12 tab:mb-[104px] pc:mb-[56px]">
-          <Menu className="hidden tab:flex tab:flex-col tab:justify-between pc:flex-row pc:w-[366px] pc:justify-between" />
+        <div className="mb-12 tab:mb-[104px] tab:flex tab:justify-between pc:mb-[56px]">
+          <Menu className="hidden tab:flex tab:flex-col tab:justify-between pc:w-[366px] pc:flex-row pc:justify-between" />
           <CallUsInfo footer />
-          <SocialLinks className="mt-6 mb-8 tab:my-0 tab:flex-col tab:text-sm1 pc:w-[308px] pc:flex-row pc:text-base pc:mr-[103px]" />
+          <SocialLinks className="mb-8 mt-6 tab:my-0 tab:flex-col tab:text-sm1 pc:mr-[103px] pc:w-[308px] pc:flex-row pc:text-base" />
         </div>
-        <div className="tab:flex text-sm1 uppercase text-center tab:text-left justify-between pc:items-baseline">
-          <div className="w-full tab:w-1/2 pc:w-1/3 mb-7">
+        <div className="justify-between text-center text-sm1 uppercase tab:flex tab:text-left pc:items-baseline">
+          <div className="mb-7 w-full tab:w-1/2 pc:w-1/3">
             <a
               href={selectedLink(locale)}
               target="_blank"
               rel="noopener noreferrer"
-              className="mb-4 tab:mb-3 w-full hoverFooter"
+              className="hoverFooter mb-4 w-full tab:mb-3"
             >
               {t("policy")}
             </a>
-            <p className="w-full ">&#169; ANVIL. {t("privacy")}</p>
+            <p className="w-full">&#169; ANVIL. {t("privacy")}</p>
           </div>
-          <div className="pc:flex flex-col gap-2 font-exo hidden pc:w-1/3">
+          <div className="hidden flex-col gap-2 font-exo pc:flex pc:w-1/3">
             <a
               href={`tel:${TEL.replace(/\s+/g, "")}`}
-              className="text-title text-lg13 font-semibold text-center hoverFooter"
+              className="hoverFooter text-center text-lg13 font-semibold text-title"
             >
               {TEL}
             </a>
             <a
               href={`mailto:${EMAIL}`}
-              className="text-title text-lg13 font-semibold text-center pc:lowercase hoverFooter"
+              className="hoverFooter text-center text-lg13 font-semibold text-title pc:lowercase"
             >
               {EMAIL}
             </a>
           </div>
-          <div className="tab:w-1/2 tab:text-right pc:text-left pc:pl-7 pc:w-1/3 text-center">
+          <div className="text-center tab:w-1/2 tab:text-right pc:w-1/3 pc:pl-7 pc:text-left">
             <a
               href="https://irynastoliarova.framer.website"
               target="_blank"
               rel="noopener noreferrer"
-              className="mb-4 tab:mb-3 hoverFooter cursor-pointer"
+              className="hoverFooter mb-4 cursor-pointer tab:mb-3"
             >
               {t("design")}
             </a>
@@ -104,7 +104,7 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-      <UpToTopStatic className="w-11 h-11 pc:w-12 pc:h-12 absolute bottom-[109px] tab:bottom-[160px] pc:bottom-10 pc:right-[60px] tab:right-5 tab:left-auto tab:translate-x-0 left-1/2 -translate-x-1/2" />
+      <UpToTopStatic className="absolute bottom-[109px] left-1/2 h-11 w-11 -translate-x-1/2 tab:bottom-[160px] tab:left-auto tab:right-5 tab:translate-x-0 pc:bottom-10 pc:right-[60px] pc:h-12 pc:w-12" />
     </footer>
   );
 };
