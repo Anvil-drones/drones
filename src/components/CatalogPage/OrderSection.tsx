@@ -24,7 +24,7 @@ export const OrderSection = () => {
   };
 
   return (
-    <div className="w-full tab:w-[677px] mx-auto tab:h-[541px] tab:p-10 tab:backdrop-blur-[10px] ">
+    <div className="mx-auto w-full tab:h-[541px] tab:w-[677px] tab:p-10 tab:backdrop-blur-[10px]">
       <OrderForm notificationHandler={notificationHandler} />
 
       <Modal isOpen={isSuccess} onClose={() => setIsSuccess(false)}>

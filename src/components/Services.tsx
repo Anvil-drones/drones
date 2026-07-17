@@ -12,11 +12,11 @@ export const Services = () => {
   return (
     <section
       id="services"
-      className="mt-[-30px] tab:mt-[-50px] relative pb-[90px] tab:pb-[50px] clip-path-down-cut-mobile-service tab:clip-path-down-cut-tab-service"
+      className="relative mt-[-30px] pb-[90px] clip-path-down-cut-mobile-service tab:mt-[-50px] tab:pb-[50px] tab:clip-path-down-cut-tab-service"
     >
       <div className="absolute inset-0 z-[-2] overflow-hidden">
         <div
-          className="w-full h-full "
+          className="h-full w-full"
           style={{
             backgroundImage: "url('/bg/noise.svg')",
             backgroundPosition: "top center",
@@ -25,33 +25,33 @@ export const Services = () => {
       </div>{" "}
       <div className="absolute inset-0 z-[-1] overflow-hidden">
         <div
-          className="w-full h-full "
+          className="h-full w-full"
           style={{
             backgroundImage: "url('/bg/gradient.png')",
             backgroundPosition: "bottom center",
           }}
         />
       </div>
-      <Union className="absolute top-[16px] tab:top-[26.4px] left-1/2 -translate-x-1/2 w-[186px] tab:w-[341px] h-auto z-[2]" />
-      <h3 className="absolute top-[21px] tab:top-[43px] left-1/2 -translate-x-1/2 z-[3] uppercase text-accent">
+      <Union className="absolute left-1/2 top-[16px] z-[2] h-auto w-[186px] -translate-x-1/2 tab:top-[26.4px] tab:w-[341px]" />
+      <h3 className="absolute left-1/2 top-[21px] z-[3] -translate-x-1/2 uppercase text-accent tab:top-[43px]">
         {t("services")}
       </h3>
-      <div className=" relative pb-[60px] pt-[78px] tab:pt-[129px] pc:pt-[133px] px-4 tab:px-5 pc:px-[60px] max-w-[540px] tab:max-w-full pc:max-w-[1440px] mx-auto">
-        <h2 className="font-exo font-semibold text-3xl tab:text-4xl pc:text-5xl text-title uppercase mb-8 w-[250px]">
+      <div className="relative mx-auto max-w-[540px] px-4 pb-[60px] pt-[78px] tab:max-w-full tab:px-5 tab:pt-[129px] pc:max-w-[1440px] pc:px-[60px] pc:pt-[133px]">
+        <h2 className="mb-8 w-[250px] font-exo text-3xl font-semibold uppercase text-title tab:text-4xl pc:text-5xl">
           {t("specializationTitle")}
         </h2>
         <ul className="pc:ml-[375px]">
           {servicesList.map((item, index) => (
             <li
               key={index}
-              className="border-t border-black30 last:border-b pt-5 pc:pt-6 pb-6"
+              className="border-t border-black30 pb-6 pt-5 last:border-b pc:pt-6"
             >
               <Accordion item={item} index={index} />
             </li>
           ))}
         </ul>
-        <div className="hidden pc:block w-9 h-9 border-l border-b absolute bottom-0 left-[60px]" />
-        <div className="hidden pc:block w-9 h-9 border-r border-t absolute top-[133px] right-[60px]" />
+        <div className="absolute bottom-0 left-[60px] hidden h-9 w-9 border-b border-l pc:block" />
+        <div className="absolute right-[60px] top-[133px] hidden h-9 w-9 border-r border-t pc:block" />
       </div>
       <Trusted />
     </section>

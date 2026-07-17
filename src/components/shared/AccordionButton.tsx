@@ -3,10 +3,10 @@ import { IconEmpty } from "./Icons/IconEmpty";
 
 export const AccordionButton = ({ className }: { className?: string }) => {
   return (
-    <div className=" relative w-7 h-7 tab:w-9 tab:h-9 pc:w-12 pc:h-12 text-accent bg-transparent hover:bg-radial-green-button transition-all duration-300 ease-in-out ">
-      <IconEmpty className="  w-7 h-7 tab:w-9 tab:h-9 pc:w-12 pc:h-12" />
+    <div className="relative h-7 w-7 bg-transparent text-accent transition-all duration-300 ease-in-out hover:bg-radial-green-button tab:h-9 tab:w-9 pc:h-12 pc:w-12">
+      <IconEmpty className="h-7 w-7 tab:h-9 tab:w-9 pc:h-12 pc:w-12" />
       <IconArrowAcordion
-        className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ${className}`}
+        className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 ${className}`}
       />
     </div>
   );

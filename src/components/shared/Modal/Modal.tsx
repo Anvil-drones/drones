@@ -45,7 +45,7 @@ export const Modal = ({ children, onClose, isOpen }: ModalProps) => {
           >
             {/* Ліва шторка */}
             <motion.div
-              className="absolute left-0 top-0 h-full w-1/2 bg-blackCustom origin-left"
+              className="absolute left-0 top-0 h-full w-1/2 origin-left bg-blackCustom"
               variants={{
                 hidden: { scaleX: 0 },
                 visible: { scaleX: 1 },
@@ -56,7 +56,7 @@ export const Modal = ({ children, onClose, isOpen }: ModalProps) => {
 
             {/* Права шторка */}
             <motion.div
-              className="absolute right-0 top-0 h-full w-1/2 bg-blackCustom origin-right"
+              className="absolute right-0 top-0 h-full w-1/2 origin-right bg-blackCustom"
               variants={{
                 hidden: { scaleX: 0 },
                 visible: { scaleX: 1 },
@@ -67,7 +67,7 @@ export const Modal = ({ children, onClose, isOpen }: ModalProps) => {
 
             {/* Модальне вікно */}
             <motion.div
-              className="relative z-10 w-screen bg-transparent overflow-y-auto h-screen"
+              className="relative z-10 h-screen w-screen overflow-y-auto bg-transparent"
               variants={{
                 hidden: {
                   opacity: 0,
@@ -95,13 +95,13 @@ export const Modal = ({ children, onClose, isOpen }: ModalProps) => {
             >
               <button
                 onClick={onClose}
-                className="absolute top-11 tab:top-[46px] pc:top-[60px] right-4 tab:right-12 pc:right-[56px] w-11 h-11 tab:w-12 tab:h-12 flex justify-center items-center text-title hover:bg-radial-green-50 hover:text-hoverAccent"
+                className="absolute right-4 top-11 flex h-11 w-11 items-center justify-center text-title hover:bg-radial-green-50 hover:text-hoverAccent tab:right-12 tab:top-[46px] tab:h-12 tab:w-12 pc:right-[56px] pc:top-[60px]"
                 aria-label="Close modal"
               >
-                <IconEmpty className="w-11 h-11 tab:w-12 tab:h-12" />
+                <IconEmpty className="h-11 w-11 tab:h-12 tab:w-12" />
                 <IconClose className="absolute" />
               </button>
-              <IconLogo className="absolute top-12 tab:top-[56px] pc:top-[70px] left-4 tab:left-12 pc:left-[60px] w-[72px] tab:w-[92px]" />
+              <IconLogo className="absolute left-4 top-12 w-[72px] tab:left-12 tab:top-[56px] tab:w-[92px] pc:left-[60px] pc:top-[70px]" />
               {children}
             </motion.div>
           </motion.div>

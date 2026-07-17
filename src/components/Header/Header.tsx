@@ -14,26 +14,26 @@ export const Header = () => {
   const locale = useLocale();
   return (
     <>
-      <header className="relative  ">
+      <header className="relative">
         <div className="absolute inset-0 z-[-1] overflow-hidden">
           <div
-            className="w-full h-full "
+            className="h-full w-full"
             style={{
               backgroundImage: "url('/bg/noise.svg')",
               backgroundPosition: "top center",
             }}
           />
         </div>
-        <div className="h-[64px] px-4 tab:px-5 pc:px-[60px] max-w-[540px] tab:max-w-full pc:max-w-[1440px] mx-auto  flex items-center justify-between ">
-          <Link href="/" className="flex items-center ">
+        <div className="mx-auto flex h-[64px] max-w-[540px] items-center justify-between px-4 tab:max-w-full tab:px-5 pc:max-w-[1440px] pc:px-[60px]">
+          <Link href="/" className="flex items-center">
             <IconLogo className="relative z-10 w-[72px] tab:w-[92px]" />
           </Link>
-          <div className="tab:hidden mr-7 mt-1">
+          <div className="mr-7 mt-1 tab:hidden">
             <LanguageSwitcher />
           </div>
-          <nav className="flex tab:gap-5 pc:gap-8 justify-end items-center ">
+          <nav className="flex items-center justify-end tab:gap-5 pc:gap-8">
             <Navbar />
-            <div className="hidden tab:flex mr-3 tab:mt-1 pc:mr-2">
+            <div className="mr-3 hidden tab:mt-1 tab:flex pc:mr-2">
               <LanguageSwitcher />
             </div>
             <CatalogLinkButton
@@ -47,7 +47,7 @@ export const Header = () => {
       </header>
 
       <div
-        className="relative z-10 w-full h-px bg-title20 tab:w-[calc(100%-40px)] pc:w-[calc(100%-120px)] tab:mx-auto"
+        className="relative z-10 h-px w-full bg-title20 tab:mx-auto tab:w-[calc(100%-40px)] pc:w-[calc(100%-120px)]"
         aria-hidden="true"
       ></div>
     </>

@@ -51,12 +51,12 @@ export const SliderGallery = ({ projects }: { projects: ProjectType }) => {
 
   return (
     <div className="relative min-w-full">
-      <div className=" overflow-hidden" ref={emblaRef}>
-        <div className=" flex">
+      <div className="overflow-hidden" ref={emblaRef}>
+        <div className="flex">
           {projects.map((project, ind) => (
             <div
               key={project.title + ind}
-              className="flex-[0_0_100%] tab:flex-[0_0_46%] w-full px-[5px] pc:px-3 "
+              className="w-full flex-[0_0_100%] px-[5px] tab:flex-[0_0_46%] pc:px-3"
             >
               {project.imageURL ? (
                 <Image
@@ -64,7 +64,7 @@ export const SliderGallery = ({ projects }: { projects: ProjectType }) => {
                   alt={project.title}
                   width={578}
                   height={325}
-                  className="aspect-[288/161] object-cover w-full h-auto"
+                  className="aspect-[288/161] h-auto w-full object-cover"
                 />
               ) : (
                 <video
@@ -75,19 +75,19 @@ export const SliderGallery = ({ projects }: { projects: ProjectType }) => {
                   autoPlay
                   muted
                   loop
-                  className="aspect-[288/161] object-cover w-full h-auto"
+                  className="aspect-[288/161] h-auto w-full object-cover"
                 >
                   <source src={project.videoURL} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               )}
-              <p className=" uppercase font-bold pc:text-lg  mt-2 pc:mt-3">
+              <p className="mt-2 font-bold uppercase pc:mt-3 pc:text-lg">
                 {project.title}
               </p>
             </div>
           ))}
         </div>
-        <div className="tab:absolute tab:top-[-118px] pc:top-[-140px] tab:right-0 mt-12 ">
+        <div className="mt-12 tab:absolute tab:right-0 tab:top-[-118px] pc:top-[-140px]">
           <div className="flex justify-between gap-4 tab:gap-5 pc:gap-6">
             <PrevButton
               onClick={onPrevButtonClick}

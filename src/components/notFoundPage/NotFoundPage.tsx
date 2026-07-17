@@ -14,21 +14,21 @@ export const NotFoundPage = () => {
   const text = t("notFound");
   const router = useRouter();
   return (
-    <div className="relative w-screen mx-auto h-[calc(100vh-64px)] bg-blackCustom">
+    <div className="relative mx-auto h-[calc(100vh-64px)] w-screen bg-blackCustom">
       <div className="absolute inset-0 overflow-hidden">
         <div
-          className="w-full h-full "
+          className="h-full w-full"
           style={{
             backgroundImage: "url('/bg/noise.svg')",
             backgroundPosition: "top center",
           }}
         />
       </div>
-      <div className=" relative pt-[35px] tab:pt-[48px] pc:pt-[61px] px-4 tab:px-5 pc:px-[60px] max-w-[540px] tab:max-w-full pc:max-w-[1440px] mx-auto">
-        <div className=" absolute top-[25vh] tab:top-[calc(50vh-76px)] pc:top-[calc(50vh-84px)] left-1/2 tab:left-auto tab:right-[calc(50%+16px)] pc:right-[calc(50%+24px)] -translate-x-1/2 tab:translate-x-0">
+      <div className="relative mx-auto max-w-[540px] px-4 pt-[35px] tab:max-w-full tab:px-5 tab:pt-[48px] pc:max-w-[1440px] pc:px-[60px] pc:pt-[61px]">
+        <div className="absolute left-1/2 top-[25vh] -translate-x-1/2 tab:left-auto tab:right-[calc(50%+16px)] tab:top-[calc(50vh-76px)] tab:translate-x-0 pc:right-[calc(50%+24px)] pc:top-[calc(50vh-84px)]">
           <Typewriter textDef={text} />
         </div>
-        <div className="absolute z-[1] top-[65vh] tab:top-[calc(50vh+16px)] pc:top-[calc(50vh+24px)] left-1/2 tab:left-[calc(50%+16px)] pc:left-[calc(50%+24px)] -translate-x-1/2 tab:translate-x-0 -translate-y-1/2">
+        <div className="absolute left-1/2 top-[65vh] z-[1] -translate-x-1/2 -translate-y-1/2 tab:left-[calc(50%+16px)] tab:top-[calc(50vh+16px)] tab:translate-x-0 pc:left-[calc(50%+24px)] pc:top-[calc(50vh+24px)]">
           <Button
             text={tButton("goHome")}
             joinUs

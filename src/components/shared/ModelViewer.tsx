@@ -7,11 +7,11 @@ import { ClonedModel } from "./ClonedModel";
 
 export default function ModelViewer() {
   return (
-    <div className=" w-full aspect-[288/170] z-[5]">
+    <div className="z-[5] aspect-[288/170] w-full">
       <Canvas
         shadows
         camera={{ position: [0, 4, 10], fov: 50 }}
-        className="w-full h-full pointer-events-none"
+        className="pointer-events-none h-full w-full"
         style={{ pointerEvents: "none" }}
       >
         <ambientLight intensity={1.2} />

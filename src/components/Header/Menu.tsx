@@ -49,7 +49,7 @@ export const Menu = ({
   };
 
   return (
-    <ul className={`${className}  `}>
+    <ul className={`${className} `}>
       {menuList.map((content, idx) => {
         return (
           <li
@@ -62,7 +62,7 @@ export const Menu = ({
               <button
                 onClick={() => handleLinkClick(content.path)}
                 className={
-                  " uppercase text-title tab:text-sm12 py-2 px-4 tab:px-3 pc:px-4 pc:text-base"
+                  "px-4 py-2 uppercase text-title tab:px-3 tab:text-sm12 pc:px-4 pc:text-base"
                 }
               >
                 <ScrambleText

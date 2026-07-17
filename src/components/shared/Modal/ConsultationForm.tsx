@@ -127,18 +127,18 @@ export const ConsultationForm = ({ notificationHandler }: FormInModalProps) => {
 
   return (
     <>
-      <h2 className="font-exo font-semibold uppercase text-2xl13 tab:text-4xl12 mb-4 text-center">
+      <h2 className="mb-4 text-center font-exo text-2xl13 font-semibold uppercase tab:text-4xl12">
         {t("formConsTitle")}
       </h2>
-      <p className="text-center tab:font-bold text-sm13 tab:text-base13 w-[288px] tab:w-[323px] mx-auto mb-4 tab:mb-10">
+      <p className="mx-auto mb-4 w-[288px] text-center text-sm13 tab:mb-10 tab:w-[323px] tab:text-base13 tab:font-bold">
         {t("formConsText")}
       </p>
       <form
         onSubmit={handleSubmit}
-        className=" max-w-[684px] w-full mx-auto text-left"
+        className="mx-auto w-full max-w-[684px] text-left"
       >
         <div className="tab:flex tab:gap-5">
-          <div className=" relative group tab:w-1/2">
+          <div className="group relative tab:w-1/2">
             <label htmlFor="name"></label>
             <input
               type="text"
@@ -148,14 +148,14 @@ export const ConsultationForm = ({ notificationHandler }: FormInModalProps) => {
               onChange={e => setFormData({ ...formData, name: e.target.value })}
               className={`${inputClass} `}
             />
-            <div className="absolute bottom-0 left-0 w-full h-3 border border-t-0 border-text group-focus:border-title transition-all duration-500 ease-in" />
+            <div className="absolute bottom-0 left-0 h-3 w-full border border-t-0 border-text transition-all duration-500 ease-in group-focus:border-title" />
             {errors.name && (
-              <p className="absolute bottom-[-16px] left-0 text-error mt-1">
+              <p className="absolute bottom-[-16px] left-0 mt-1 text-error">
                 {errors.name}
               </p>
             )}
           </div>
-          <div className=" relative group tab:w-1/2">
+          <div className="group relative tab:w-1/2">
             <label htmlFor="organization"></label>
             <input
               type="text"
@@ -167,11 +167,11 @@ export const ConsultationForm = ({ notificationHandler }: FormInModalProps) => {
               }
               className={`${inputClass} `}
             />
-            <div className="absolute bottom-0 left-0 w-full h-3 border border-t-0 border-text group-focus:border-title transition-all duration-500 ease-in" />
+            <div className="absolute bottom-0 left-0 h-3 w-full border border-t-0 border-text transition-all duration-500 ease-in group-focus:border-title" />
           </div>
         </div>
         <div className="tab:flex tab:gap-5">
-          <div className=" relative group tab:w-1/2">
+          <div className="group relative tab:w-1/2">
             <label htmlFor="email"></label>
             <input
               type="email"
@@ -183,16 +183,16 @@ export const ConsultationForm = ({ notificationHandler }: FormInModalProps) => {
               }
               className={`${inputClass}`}
             />
-            <div className="absolute bottom-0 left-0 w-full h-3 border border-t-0 border-text group-focus:border-title transition-all duration-500 ease-in" />
+            <div className="absolute bottom-0 left-0 h-3 w-full border border-t-0 border-text transition-all duration-500 ease-in group-focus:border-title" />
 
             {errors.email && (
-              <p className=" absolute bottom-[-16px] left-0 text-error mt-1">
+              <p className="absolute bottom-[-16px] left-0 mt-1 text-error">
                 {errors.email}
               </p>
             )}
           </div>
 
-          <div className=" relative group tab:w-1/2">
+          <div className="group relative tab:w-1/2">
             <label htmlFor="phone"></label>
             <input
               type="tel"
@@ -204,10 +204,10 @@ export const ConsultationForm = ({ notificationHandler }: FormInModalProps) => {
               }
               className={`${inputClass}`}
             />
-            <div className="absolute bottom-0 left-0 w-full h-3 border border-t-0 border-text group-focus:border-title transition-all duration-500 ease-in" />
+            <div className="absolute bottom-0 left-0 h-3 w-full border border-t-0 border-text transition-all duration-500 ease-in group-focus:border-title" />
           </div>
         </div>
-        <div className=" relative group mb-7">
+        <div className="group relative mb-7">
           <label htmlFor="message"></label>
           <textarea
             id="message"
@@ -219,9 +219,9 @@ export const ConsultationForm = ({ notificationHandler }: FormInModalProps) => {
             }
             className={`${inputClass}`}
           />
-          <div className="absolute bottom-0 left-0 w-full h-3 border border-t-0 border-text group-focus:border-title transition-all duration-500 ease-in" />
+          <div className="absolute bottom-0 left-0 h-3 w-full border border-t-0 border-text transition-all duration-500 ease-in group-focus:border-title" />
         </div>
-        <div className=" flex gap-5 items-center">
+        <div className="flex items-center gap-5">
           <input
             type="file"
             id="file"
@@ -248,24 +248,24 @@ export const ConsultationForm = ({ notificationHandler }: FormInModalProps) => {
           />
           <label
             htmlFor="file"
-            className="relative w-12 h-12 flex justify-center items-center text-accent hover:bg-radial-green-50 cursor-pointer"
+            className="relative flex h-12 w-12 cursor-pointer items-center justify-center text-accent hover:bg-radial-green-50"
             aria-label="Button pin the document"
           >
-            <IconEmpty className="w-12 h-12" />
+            <IconEmpty className="h-12 w-12" />
             <IconPaperclip className="absolute" />
           </label>
 
           <div>
-            <p className="font-exo text-sm1 uppercase font-semibold">
+            <p className="font-exo text-sm1 font-semibold uppercase">
               {fileName ? fileName : t("pinDoc")}
             </p>
             {status && <p className="text-accent">{status}</p>}
           </div>
         </div>
-        <div className="tab:flex tab:gap-5 mt-4 tab:mt-[45px]">
-          <div className="flex gap-2 text-sm13 mb-10 tab:mb-0 tab:w-1/2">
+        <div className="mt-4 tab:mt-[45px] tab:flex tab:gap-5">
+          <div className="mb-10 flex gap-2 text-sm13 tab:mb-0 tab:w-1/2">
             <div>
-              <span className="block w-2 h-2 bg-accent mt-1"></span>
+              <span className="mt-1 block h-2 w-2 bg-accent"></span>
             </div>
             <p>
               {t.rich("policyAccept", {
@@ -274,7 +274,7 @@ export const ConsultationForm = ({ notificationHandler }: FormInModalProps) => {
                     href={selectedLink(locale)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline inline"
+                    className="inline underline"
                   >
                     {chunk}
                   </a>
@@ -283,7 +283,7 @@ export const ConsultationForm = ({ notificationHandler }: FormInModalProps) => {
             </p>
           </div>
 
-          <div className="flex justify-center tab:justify-end tab:w-1/2">
+          <div className="flex justify-center tab:w-1/2 tab:justify-end">
             <Button
               text={tButton("submit")}
               submit

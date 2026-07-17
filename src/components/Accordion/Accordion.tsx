@@ -63,13 +63,13 @@ export function Accordion({
   };
 
   return (
-    <div className="w-full p-0 m-0">
+    <div className="m-0 w-full p-0">
       <button
         aria-label="open answer button"
         onClick={toggleAccordion}
-        className="w-full outline-none text-left cursor-pointer pc:flex pc:items-start pc:gap-6"
+        className="w-full cursor-pointer text-left outline-none pc:flex pc:items-start pc:gap-6"
       >
-        <div className="flex items-center justify-between gap-4 mb-3">
+        <div className="mb-3 flex items-center justify-between gap-4">
           <FourSquaresRow index={index + 1} />
           {!item.full ? (
             <div className="pc:hidden">
@@ -81,9 +81,9 @@ export function Accordion({
             </div>
           ) : null}
         </div>
-        <div className="pc:flex pc:items-start pc:justify-between w-full tab:w-[93%]">
+        <div className="w-full tab:w-[93%] pc:flex pc:items-start pc:justify-between">
           <div>
-            <p className="font-exo mb-3 font-semibold text-title uppercase pc:text-lg">
+            <p className="mb-3 font-exo font-semibold uppercase text-title pc:text-lg">
               {item.title}
             </p>
             <p className="text-base12 pc:w-[678px]">{item.text}</p>
@@ -112,12 +112,12 @@ export function Accordion({
         >
           <div
             ref={contentRef}
-            className="tab:flex tab:gap-5 tab:items-center pc:ml-[82px]"
+            className="tab:flex tab:items-center tab:gap-5 pc:ml-[82px]"
           >
             {item.imageURL ? (
-              <div className="w-full tab:w-[39%] aspect-[282/176] h-auto mb-4 tab:mb-0 ">
+              <div className="mb-4 aspect-[282/176] h-auto w-full tab:mb-0 tab:w-[39%]">
                 {Array.isArray(item.imageURL) ? (
-                  <div className=" tab:flex tab:gap-2">
+                  <div className="tab:flex tab:gap-2">
                     {item.imageURL.map((url: string, idx: number) => (
                       <Image
                         key={idx}
@@ -125,7 +125,7 @@ export function Accordion({
                         alt={`${item.title} ${idx + 1}`}
                         width={578}
                         height={325}
-                        className="w-full h-auto aspect-[282/176] object-cover "
+                        className="aspect-[282/176] h-auto w-full object-cover"
                       />
                     ))}
                   </div>
@@ -135,16 +135,16 @@ export function Accordion({
                     alt={`${item.title}`}
                     width={578}
                     height={325}
-                    className="w-full h-full aspect-[282/176] object-cover"
+                    className="aspect-[282/176] h-full w-full object-cover"
                   />
                 )}
               </div>
             ) : null}
             {item.list ? (
-              <ul className="flex flex-col gap-4 tab:text-base12 tab:w-[52%]">
+              <ul className="flex flex-col gap-4 tab:w-[52%] tab:text-base12">
                 {item.list.map((listItem: string, index: number) => (
                   <li key={index} className="flex items-center gap-2">
-                    <div className="w-4 h-4 flex items-center justify-center">
+                    <div className="flex h-4 w-4 items-center justify-center">
                       <IconPlay />
                     </div>
                     {listItem}

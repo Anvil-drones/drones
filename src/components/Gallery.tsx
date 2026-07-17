@@ -10,18 +10,18 @@ export const Gallery = ({ catalog }: { catalog?: boolean }) => {
   return (
     <section
       id="gallery"
-      className={`relative pt-[65px] tab:pt-[130px] pb-[105px]  mt-[-45px] tab:mt-[-73px] z-[8] bg-blackCustom ${
+      className={`relative z-[8] mt-[-45px] bg-blackCustom pb-[105px] pt-[65px] tab:mt-[-73px] tab:pt-[130px] ${
         catalog
-          ? "clip-path-hex-notch-galery-catalog tab:clip-path-hex-notch-galery-tab-catalog mb-[-30px] tab:mb-[-50px]"
+          ? "mb-[-30px] clip-path-hex-notch-galery-catalog tab:mb-[-50px] tab:clip-path-hex-notch-galery-tab-catalog"
           : "clip-path-hex-notch-galery tab:clip-path-hex-notch-galery-tab"
       }`}
     >
-      <Union className="absolute top-[2px] left-1/2 -translate-x-1/2 w-[186px] tab:w-[341px] h-auto z-[2]" />
-      <h3 className="absolute top-[8px] tab:top-5 left-1/2 -translate-x-1/2 z-[3] uppercase text-accent">
+      <Union className="absolute left-1/2 top-[2px] z-[2] h-auto w-[186px] -translate-x-1/2 tab:w-[341px]" />
+      <h3 className="absolute left-1/2 top-[8px] z-[3] -translate-x-1/2 uppercase text-accent tab:top-5">
         {t("gallery")}
       </h3>
-      <div className="relative px-4 tab:px-5 pc:px-[60px] max-w-[540px] tab:max-w-full pc:max-w-[1440px] mx-auto">
-        <h2 className="font-exo font-semibold uppercase text-center tab:text-left text-3xl pc:text-5xl mb-8 pc:mb-12">
+      <div className="relative mx-auto max-w-[540px] px-4 tab:max-w-full tab:px-5 pc:max-w-[1440px] pc:px-[60px]">
+        <h2 className="mb-8 text-center font-exo text-3xl font-semibold uppercase tab:text-left pc:mb-12 pc:text-5xl">
           {t("portfolioTitle")}
         </h2>
         <SliderGallery projects={projectsGallery(t)} />

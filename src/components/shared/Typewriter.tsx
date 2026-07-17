@@ -18,12 +18,12 @@ export default function Typewriter({ textDef }: { textDef: string }) {
   }, [index, textDef]);
 
   return (
-    <div className="text-base13 tab:text-lg13 pc:text-2xl font-medium uppercase whitespace-pre relative inline-block">
+    <div className="relative inline-block whitespace-pre text-base13 font-medium uppercase tab:text-lg13 pc:text-2xl">
       {text}
       <AnimatePresence>
         <motion.span
           key={index}
-          className="inline-block bg-title h-4 mb-[2px] w-2 tab:w-[10px] tab:h-[18px] pc:h-5  ml-2 align-bottom"
+          className="mb-[2px] ml-2 inline-block h-4 w-2 bg-title align-bottom tab:h-[18px] tab:w-[10px] pc:h-5"
           initial={{ opacity: 1 }}
           animate={{ opacity: [1, 0, 1] }}
           transition={{

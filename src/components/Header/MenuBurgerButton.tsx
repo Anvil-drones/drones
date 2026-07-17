@@ -16,17 +16,15 @@ export const MenuBurgerButton = ({
       aria-label={isHeaderMenuOpened ? "close menu button" : "open menu button"}
       type="button"
       onClick={toggleHeaderMenuOpen}
-      className="relative w-11 h-11 p-1 flex justify-center items-center z-10"
+      className="relative z-10 flex h-11 w-11 items-center justify-center p-1"
     >
-      <IconEmpty className="w-9 h-9" />
+      <IconEmpty className="h-9 w-9" />
       <IconMenu
-        className={`absolute transition-opacity duration-300
-              ${isHeaderMenuOpened ? "opacity-0 pointer-events-none" : "opacity-100 pointer-events-auto"}`}
+        className={`absolute transition-opacity duration-300 ${isHeaderMenuOpened ? "pointer-events-none opacity-0" : "pointer-events-auto opacity-100"}`}
       />
 
       <IconClose
-        className={`absolute transition-opacity duration-300
-              ${isHeaderMenuOpened ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
+        className={`absolute transition-opacity duration-300 ${isHeaderMenuOpened ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"}`}
       />
     </button>
   );

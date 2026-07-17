@@ -50,12 +50,12 @@ export default function ModelScrollerTab() {
 
   return (
     <div
-      className="pc:hidden pointer-events-none fixed top-[208px] tab:top-[220px] pc:top-[250px] left-0 w-full z-[5]"
+      className="pointer-events-none fixed left-0 top-[208px] z-[5] w-full tab:top-[220px] pc:top-[250px] pc:hidden"
       style={{
         transform: `translateY(${translateY}px)`,
       }}
     >
-      <div className="w-full max-w-[520px] tab:max-w-[700px] pc:max-w-[900px] mx-auto aspect-[288/170] tab:aspect-[258/170]">
+      <div className="mx-auto aspect-[288/170] w-full max-w-[520px] tab:aspect-[258/170] tab:max-w-[700px] pc:max-w-[900px]">
         <ModelViewer />
       </div>
     </div>

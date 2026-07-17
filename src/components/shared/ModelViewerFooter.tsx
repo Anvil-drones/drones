@@ -5,38 +5,13 @@ import { Suspense } from "react";
 
 import { ClonedModel } from "./ClonedModel";
 
-// function Model() {
-//   const { scene, animations } = useGLTF("/model/DreoneFPV_TEX.gltf");
-//   const group = useRef<THREE.Group>(null);
-//   const mixer = useRef<THREE.AnimationMixer | null>(null);
-
-//   useEffect(() => {
-//     if (animations && animations.length > 0 && group.current) {
-//       mixer.current = new THREE.AnimationMixer(group.current);
-//       animations.forEach(clip => {
-//         mixer.current?.clipAction(clip).play();
-//       });
-//     }
-//   }, [animations]);
-
-//   useFrame((state, delta) => {
-//     mixer.current?.update(delta);
-//   });
-
-//   return (
-//     <group ref={group} scale={[25, 25, 25]} position={[0, 0, 0]}>
-//       <primitive object={scene} />
-//     </group>
-//   );
-// }
-
 export default function ModelViewerFooter() {
   return (
-    <div className=" w-full aspect-[208/130] z-10">
+    <div className="z-10 aspect-[208/130] w-full">
       <Canvas
         shadows
         camera={{ position: [0, 7, 10], fov: 50 }}
-        className="w-full h-full"
+        className="h-full w-full"
       >
         <ambientLight intensity={1.2} />
         <spotLight

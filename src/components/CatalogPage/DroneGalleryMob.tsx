@@ -47,14 +47,14 @@ export const DroneGalleryMob = ({
                 alt={`${slug}-${index + 1}`}
                 width={426}
                 height={338}
-                className="w-full h-auto"
+                className="h-auto w-full"
               />
             </div>
           ))}
         </div>
       </div>
 
-      <span className="absolute min-w-[25px] flex justify-end font-exo text-[10px] font-medium px-1 py-0.5 bottom-1 right-1 bg-black30 text-title">
+      <span className="absolute bottom-1 right-1 flex min-w-[25px] justify-end bg-black30 px-1 py-0.5 font-exo text-[10px] font-medium text-title">
         {current + 1}/{images.length}
       </span>
     </div>
