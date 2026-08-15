@@ -10,7 +10,7 @@ export type DroneEquipment = {
   value: string;
 };
 export type DroneFilterType =
-  "all" | "fpv-opt" | "fpv-radio" | "fpv-cargo" | "interceptor";
+  "all" | "fpv-opt" | "fpv-radio" | "fpv-cargo" | "interceptor" | "matka";
 
 export type DroneFilter = { name: string; type: DroneFilterType };
 
@@ -21,12 +21,14 @@ export type Drone = {
   uk: {
     title: string;
     subtitle: string;
+    additionalInfo?: string;
     features: DroneFeature[];
     equipment: DroneEquipment[];
   };
   en: {
     title: string;
     subtitle: string;
+    additionalInfo?: string;
     features: DroneFeature[];
     equipment: DroneEquipment[];
   };
@@ -894,6 +896,128 @@ export const dronesList: Drone[] = [
       ],
     },
   },
+  {
+    slug: "taxi",
+    type: "matka",
+    images: [
+      "/images/catalog/taxi/1.jpg",
+      "/images/catalog/taxi/2.jpg",
+      "/images/catalog/taxi/3.jpg",
+      "/images/catalog/taxi/4.jpg",
+    ],
+
+    uk: {
+      title: "БПЛА “TAXI”",
+      subtitle: "18 дюймовий багаторазовий FPV дрон",
+      additionalInfo:
+        "Може використовуватись як Дрон-матка носій 10-дюмових дронів камікадзе, дрон-логіст для доставки провізії за рахунок скиду та стабілізації, також можливе використання у якості бомбера ворожих позицій",
+      features: [
+        {
+          label: "Максимальна дальність польоту",
+          value: "35 км",
+        },
+        {
+          label: "Навантаження бойової частини",
+          value: "до 9 кг",
+        },
+        {
+          label: "Час польоту",
+          value: "до 40 хв",
+        },
+      ],
+
+      equipment: [
+        {
+          label: "Рама",
+          value: "18 inch Carbon",
+        },
+        {
+          label: "Мотори",
+          value: "FlashHobby 4320 A4320 350kv",
+        },
+        {
+          label: "Політний стек",
+          value: "SoloGood 8S F722 100A",
+        },
+        {
+          label: "Приймач",
+          value: "BAYCKRC 900MHz/2.4GHz ELRS Dual Band Gemini",
+        },
+        {
+          label: "Пропелер",
+          value: "Електро APC 18x5.5MR",
+        },
+        {
+          label: "Акумулятор літій-іон",
+          value: "8S4P - 2 шт",
+        },
+        {
+          label: "Камера",
+          value: "FPV Foxeer Cat 4 Micro - 2шт",
+        },
+        {
+          label: "Антена відео",
+          value: "Rush Cherry V2 5.8G RHCP + система шифрування відео",
+        },
+      ],
+    },
+
+    en: {
+      title: "UAV “TAXI”",
+      subtitle: "18-inch reusable FPV drone",
+      additionalInfo:
+        "Can be used as a mother drone carrying 10-inch kamikaze drones, as a logistics drone for delivering supplies using its drop and stabilization system, or as a bomber for enemy positions",
+      features: [
+        {
+          label: "Maximum flight range",
+          value: "35 km",
+        },
+        {
+          label: "Payload",
+          value: "Up to 9 kg",
+        },
+        {
+          label: "Flight time",
+          value: "Up to 40 min",
+        },
+      ],
+
+      equipment: [
+        {
+          label: "Frame",
+          value: "18 inch Carbon",
+        },
+        {
+          label: "Motors",
+          value: "FlashHobby 4320 A4320 350kv",
+        },
+        {
+          label: "Flight stack",
+          value: "SoloGood 8S F722 100A",
+        },
+        {
+          label: "Receiver",
+          value: "BAYCKRC 900MHz/2.4GHz ELRS Dual Band Gemini",
+        },
+        {
+          label: "Propeller",
+          value: "1050 Gefman",
+        },
+        {
+          label: "Li-ion battery",
+          value: "8S4P - 2 pcs",
+        },
+        {
+          label: "Camera",
+          value: "FPV Foxeer Cat 4 Micro - 2 pcs",
+        },
+        {
+          label: "Video antenna",
+          value: "Rush Cherry V2 5.8G RHCP + video encryption system",
+        },
+      ],
+    },
+  },
 ];
 
 export const filterCatalogList = (
@@ -904,4 +1028,5 @@ export const filterCatalogList = (
   // { name: t("catalogFilter2"), type: "fpv-cargo" },
   { name: t("catalogFilter3"), type: "fpv-radio" },
   { name: t("catalogFilter4"), type: "interceptor" },
+  { name: t("catalogFilter5"), type: "matka" },
 ];

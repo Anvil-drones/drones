@@ -28,7 +28,7 @@ export const CatalogCardMob = ({ item }: { item: Drone }) => {
         <p className="font-exo text-sm1 font-medium">{content.subtitle}</p>
       </div>
       <div className="mb-3 flex items-center justify-between">
-        <h4 className="flex items-center text-sm1 font-bold uppercase">
+        <h4 className="flex items-center gap-2 text-sm1 font-bold uppercase">
           <span className="mr-2 block h-1 w-1 bg-accent"></span>
           {t("features")}
         </h4>
@@ -48,6 +48,9 @@ export const CatalogCardMob = ({ item }: { item: Drone }) => {
             transition={{ duration: 0.3 }}
             className="flex flex-col gap-2 overflow-hidden pb-1"
           >
+            {content.additionalInfo && (
+              <li className="mb-3 text-sm13">{content.additionalInfo}</li>
+            )}
             {content.features.map(feature => (
               <li key={item.slug + feature.label} className="flex gap-2">
                 <IconBullet className="h-3 w-auto shrink-0" />
@@ -64,7 +67,7 @@ export const CatalogCardMob = ({ item }: { item: Drone }) => {
       </AnimatePresence>
       <div className="mb-3 mt-3 h-px w-full bg-text/15" />
       <div className="mb-3 flex items-center justify-between">
-        <h4 className="flex items-center text-sm1 font-bold uppercase">
+        <h4 className="flex items-center gap-2 text-sm1 font-bold uppercase">
           <span className="mr-2 block h-1 w-1 bg-accent"></span>
           {t("equipment")}
         </h4>

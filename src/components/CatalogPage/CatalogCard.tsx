@@ -25,11 +25,13 @@ export const CatalogCard = ({ item }: { item: Drone }) => {
             {content.subtitle}
           </p>
         </div>
-        <h4 className="mb-3 flex items-center font-bold uppercase">
+        <h4 className="mb-3 flex items-center gap-2 font-bold uppercase">
           <span className="mr-2 block h-2 w-2 bg-accent"></span>
           {t("features")}
         </h4>
-
+        {content.additionalInfo && (
+          <p className="mb-2 text-sm13">{content.additionalInfo}</p>
+        )}
         <ul className="flex flex-col gap-2 overflow-hidden pb-1">
           {content.features.map(feature => (
             <li
@@ -48,7 +50,7 @@ export const CatalogCard = ({ item }: { item: Drone }) => {
         </ul>
 
         <div className="mb-3 mt-3 h-px w-full bg-text/15" />
-        <h4 className="mb-3 flex items-center font-bold uppercase">
+        <h4 className="mb-3 flex items-center gap-2 font-bold uppercase">
           <span className="mr-2 block h-2 w-2 bg-accent"></span>
           {t("equipment")}
         </h4>
