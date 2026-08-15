@@ -12,6 +12,8 @@ export const getServicesList = (t: ReturnType<typeof useTranslations>) => [
       t("specList1Item3"),
       t("specList1Item4"),
       t("specList1Item5"),
+      t("specList1Item6"),
+      t("specList1Item7"),
     ],
     imageURL: "/images/image1.jpg",
   },
