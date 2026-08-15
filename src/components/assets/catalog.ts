@@ -902,8 +902,8 @@ export const dronesList: Drone[] = [
     images: [
       "/images/catalog/taxi/1.jpg",
       "/images/catalog/taxi/2.jpg",
-      "/images/catalog/taxi/4.jpg",
       "/images/catalog/taxi/3.jpg",
+      "/images/catalog/taxi/4.jpg",
     ],
 
     uk: {
