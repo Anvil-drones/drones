@@ -117,7 +117,7 @@ export function Accordion({
             {item.imageURL ? (
               <div className="mb-4 aspect-[282/176] h-auto w-full tab:mb-0 tab:w-[39%]">
                 {Array.isArray(item.imageURL) ? (
-                  <div className="tab:flex tab:gap-2">
+                  <div className="flex flex-col gap-2 tab:flex-row">
                     {item.imageURL.map((url: string, idx: number) => (
                       <Image
                         key={idx}
