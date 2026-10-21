@@ -900,29 +900,44 @@ export const dronesList: Drone[] = [
     slug: "taxi",
     type: "matka",
     images: [
-      "/images/catalog/taxi/1.jpg",
-      "/images/catalog/taxi/2.jpg",
-      "/images/catalog/taxi/3.jpg",
-      "/images/catalog/taxi/4.jpg",
+      "/images/catalog/taxi/1.PNG",
+      "/images/catalog/taxi/2.PNG",
+      "/images/catalog/taxi/3.PNG",
+      "/images/catalog/taxi/4.PNG",
+      "/images/catalog/taxi/5.PNG",
+      "/images/catalog/taxi/6.PNG",
+      "/images/catalog/taxi/7.PNG",
+      "/images/catalog/taxi/8.PNG",
+      "/images/catalog/taxi/9.PNG",
+      "/images/catalog/taxi/10.PNG",
+      "/images/catalog/taxi/11.PNG",
+      "/images/catalog/taxi/12.PNG",
+      "/images/catalog/taxi/13.PNG",
+      "/images/catalog/taxi/14.PNG",
+      "/images/catalog/taxi/15.PNG",
+      "/images/catalog/taxi/16.PNG",
+      "/images/catalog/taxi/17.PNG",
     ],
 
     uk: {
-      title: "БПЛА “TAXI”",
-      subtitle: "18 дюймовий багаторазовий FPV дрон",
+      title: "БПЛА “TAXI” А/Ц",
+      subtitle:
+        "У виконані завдання бомбер-логіст на аналоговій або цифровій системі зв’язку",
       additionalInfo:
         "Може використовуватись як Дрон-матка носій 10-дюмових дронів камікадзе, дрон-логіст для доставки провізії за рахунок скиду та стабілізації, також можливе використання у якості бомбера ворожих позицій",
       features: [
         {
           label: "Максимальна дальність польоту",
-          value: "35 км",
+          value:
+            "40+ км без корисного навантаження, 17 км з корисним навантаженням",
         },
         {
           label: "Навантаження бойової частини",
-          value: "до 9 кг",
+          value: "до 8 кг",
         },
         {
           label: "Час польоту",
-          value: "до 40 хв",
+          value: "до 45 хв",
         },
       ],
 
@@ -933,7 +948,7 @@ export const dronesList: Drone[] = [
         },
         {
           label: "Мотори",
-          value: "FlashHobby 4320 A4320 350kv",
+          value: "Мотори 5315 420kv",
         },
         {
           label: "Політний стек",
@@ -949,11 +964,11 @@ export const dronesList: Drone[] = [
         },
         {
           label: "Акумулятор літій-іон",
-          value: "8S4P - 2 шт",
+          value: "8S4P 20000 мА·г - 2 шт",
         },
         {
           label: "Камера",
-          value: "FPV Foxeer Cat 4 Micro - 2шт",
+          value: "Caddx ratel PRO 1500 TVL- 2 шт",
         },
         {
           label: "Антена відео",
@@ -963,22 +978,23 @@ export const dronesList: Drone[] = [
     },
 
     en: {
-      title: "UAV “TAXI”",
-      subtitle: "18-inch reusable FPV drone",
+      title: "UAV “TAXI” A/C",
+      subtitle:
+        "A logistics bomber designed to perform missions using analog or digital communication systems",
       additionalInfo:
         "Can be used as a mother drone carrying 10-inch kamikaze drones, as a logistics drone for delivering supplies using its drop and stabilization system, or as a bomber for enemy positions",
       features: [
         {
           label: "Maximum flight range",
-          value: "35 km",
+          value: "40+ km without payload, 17 km with payload",
         },
         {
           label: "Payload",
-          value: "Up to 9 kg",
+          value: "Up to 8 kg",
         },
         {
           label: "Flight time",
-          value: "Up to 40 min",
+          value: "Up to 45 min",
         },
       ],
 
@@ -989,7 +1005,7 @@ export const dronesList: Drone[] = [
         },
         {
           label: "Motors",
-          value: "FlashHobby 4320 A4320 350kv",
+          value: "5315 420KV motors",
         },
         {
           label: "Flight stack",
@@ -1001,19 +1017,291 @@ export const dronesList: Drone[] = [
         },
         {
           label: "Propeller",
-          value: "1050 Gefman",
+          value: "APC 18x5.5MR electric propellers",
         },
         {
           label: "Li-ion battery",
-          value: "8S4P - 2 pcs",
+          value: "8S4P 20,000 mAh - 2 pcs",
         },
         {
           label: "Camera",
-          value: "FPV Foxeer Cat 4 Micro - 2 pcs",
+          value: "Caddx ratel PRO 1500 TVL - 2 pcs",
         },
         {
           label: "Video antenna",
           value: "Rush Cherry V2 5.8G RHCP + video encryption system",
+        },
+      ],
+    },
+  },
+  {
+    slug: "taxiS",
+    type: "matka",
+    images: [
+      "/images/catalog/taxis/1.png",
+      "/images/catalog/taxis/2.png",
+      "/images/catalog/taxis/3.png",
+      "/images/catalog/taxis/4.png",
+      "/images/catalog/taxis/5.png",
+      "/images/catalog/taxis/6.png",
+    ],
+
+    uk: {
+      title: "БПЛА “TAXI” S",
+      subtitle: "На старлінк зв’язку у виконані завдання бомбер-логіст",
+      additionalInfo:
+        "Може використовуватись як Дрон-матка носій 10-дюмових дронів камікадзе, дрон-логіст для доставки провізії за рахунок скиду та стабілізації, також можливе використання у якості бомбера ворожих позицій",
+      features: [
+        {
+          label: "Максимальна дальність польоту",
+          value:
+            "40+ км без корисного навантаження, 17 км з корисним навантаженням",
+        },
+        {
+          label: "Навантаження бойової частини",
+          value: "до 6.5 кг",
+        },
+        {
+          label: "Час польоту",
+          value: "до 45 хв",
+        },
+        {
+          label: "Максимальна швидкість",
+          value: "150 км/год",
+        },
+      ],
+
+      equipment: [
+        {
+          label: "Рама",
+          value: "18 inch Carbon",
+        },
+        {
+          label: "Мотори",
+          value: "Мотори 5315 420kv",
+        },
+        {
+          label: "Політний стек",
+          value: "SoloGood 8S F722 100A",
+        },
+        {
+          label: "Приймач",
+          value: "BAYCKRC 900MHz/2.4GHz ELRS Dual Band Gemini",
+        },
+        {
+          label: "Пропелер",
+          value: "Електро APC 18x5.5MR",
+        },
+        {
+          label: "Акумулятор",
+          value: "АКБ SSB 8S 30Ah або SSB 8S 22Ah - 2 шт",
+        },
+        {
+          label: "Камера",
+          value:
+            "ArduCam IMX219 8 Мп 1/4 дюйма - ширококутна - для NVIDIA Jetson Nano - ArduCam B0179",
+        },
+        {
+          label: "Starlink",
+          value: "Starlink Mini Gen 3",
+        },
+        {
+          label: "Мікрокомп'ютер",
+          value: "Raspberry Pi 5 Board 2GB",
+        },
+      ],
+    },
+
+    en: {
+      title: "UAV “TAXI” S",
+      subtitle:
+        "A logistics bomber designed to perform missions using Starlink connectivity",
+      additionalInfo:
+        "Can be used as a mothership drone carrying 10-inch kamikaze drones, a logistics drone for delivering supplies via payload drop, or a bomber for striking enemy positions",
+      features: [
+        {
+          label: "Maximum flight range",
+          value: "40+ km without payload, 17 km with payload",
+        },
+        {
+          label: "Payload",
+          value: "Up to 6.5 kg",
+        },
+        {
+          label: "Flight time",
+          value: "Up to 45 min",
+        },
+        {
+          label: "Maximum Speed",
+          value: "150 km/h",
+        },
+      ],
+
+      equipment: [
+        {
+          label: "Frame",
+          value: "18 inch Carbon",
+        },
+        {
+          label: "Motors",
+          value: "5315 420KV motors",
+        },
+        {
+          label: "Flight stack",
+          value: "SoloGood 8S F722 100A",
+        },
+        {
+          label: "Receiver",
+          value: "BAYCKRC 900MHz/2.4GHz ELRS Dual Band Gemini",
+        },
+        {
+          label: "Propeller",
+          value: "APC 18x5.5MR electric propellers",
+        },
+        {
+          label: "Battery",
+          value: "SSB 8S 30Ah or SSB 8S 22Ah battery — 2 units",
+        },
+        {
+          label: "Camera",
+          value:
+            "ArduCam IMX219 8MP 1/4-inch Wide-Angle Camera for NVIDIA Jetson Nano — ArduCam B0179",
+        },
+        {
+          label: "Starlink",
+          value: "Starlink Mini Gen 3",
+        },
+        {
+          label: "Microcomputer",
+          value: "Raspberry Pi 5 Board 2GB",
+        },
+      ],
+    },
+  },
+  {
+    slug: "taxiSR",
+    type: "matka",
+    images: ["/images/catalog/taxisr/0.png", "/images/catalog/taxisr/1.png"],
+
+    uk: {
+      title: "БПЛА “TAXI” SR",
+      subtitle: "На старлінк зв’язку у виконані завдання бомбер-логіст",
+      additionalInfo:
+        "Може використовуватись як Дрон-матка носій 10-дюмових дронів камікадзе, дрон-логіст для доставки провізії за рахунок скиду та стабілізації, також можливе використання у якості бомбера ворожих позицій",
+      features: [
+        {
+          label: "Максимальна дальність польоту",
+          value: "40 км з корисного навантаженням ретранслятора",
+        },
+        {
+          label: "Навантаження бойової частини",
+          value: "до 3 кг",
+        },
+        {
+          label: "Час польоту",
+          value: "до 50 хв",
+        },
+      ],
+
+      equipment: [
+        {
+          label: "Рама",
+          value: "18 inch Carbon",
+        },
+        {
+          label: "Мотори",
+          value: "Мотори 5315 420kv",
+        },
+        {
+          label: "Політний стек",
+          value: "SoloGood 8S F722 100A",
+        },
+        {
+          label: "Приймач",
+          value: "BAYCKRC 900MHz/2.4GHz ELRS Dual Band Gemini",
+        },
+        {
+          label: "Пропелер",
+          value: "Електро APC 18x5.5MR",
+        },
+        {
+          label: "Акумулятор",
+          value: "АКБ SSB 8S 30Ah або SSB 8S 22Ah - 2 шт",
+        },
+        {
+          label: "Камера",
+          value:
+            "ArduCam IMX219 8 Мп 1/4 дюйма - ширококутна - для NVIDIA Jetson Nano - ArduCam B0179",
+        },
+        {
+          label: "Starlink",
+          value: "Starlink Mini Gen 3",
+        },
+        {
+          label: "Мікрокомп'ютер",
+          value: "Raspberry Pi 5 Board 2GB",
+        },
+      ],
+    },
+
+    en: {
+      title: "UAV “TAXI” SR",
+      subtitle:
+        "A logistics bomber designed to perform missions using Starlink connectivity",
+      additionalInfo:
+        "Can be used as a mothership drone carrying 10-inch kamikaze drones, a logistics drone for delivering supplies via payload drop, or a bomber for striking enemy positions",
+      features: [
+        {
+          label: "Maximum flight range",
+          value: "40 km with a relay payload",
+        },
+        {
+          label: "Payload",
+          value: "Up to 3 kg",
+        },
+        {
+          label: "Flight time",
+          value: "Up to 50 min",
+        },
+      ],
+
+      equipment: [
+        {
+          label: "Frame",
+          value: "18 inch Carbon",
+        },
+        {
+          label: "Motors",
+          value: "5315 420KV motors",
+        },
+        {
+          label: "Flight stack",
+          value: "SoloGood 8S F722 100A",
+        },
+        {
+          label: "Receiver",
+          value: "BAYCKRC 900MHz/2.4GHz ELRS Dual Band Gemini",
+        },
+        {
+          label: "Propeller",
+          value: "APC 18x5.5MR electric propellers",
+        },
+        {
+          label: "Battery",
+          value: "SSB 8S 30Ah or SSB 8S 22Ah battery — 2 units",
+        },
+        {
+          label: "Camera",
+          value:
+            "ArduCam IMX219 8MP 1/4-inch Wide-Angle Camera for NVIDIA Jetson Nano — ArduCam B0179",
+        },
+        {
+          label: "Starlink",
+          value: "Starlink Mini Gen 3",
+        },
+        {
+          label: "Microcomputer",
+          value: "Raspberry Pi 5 Board 2GB",
         },
       ],
     },

@@ -40,14 +40,14 @@ export const DroneGalleryMob = ({
           {images.map((image, index) => (
             <div
               key={slug + index}
-              className="min-w-0 shrink-0 grow-0 basis-full"
+              className="aspect-[320/252] min-w-0 shrink-0 grow-0 basis-full bg-slate-50"
             >
               <Image
                 src={image}
                 alt={`${slug}-${index + 1}`}
                 width={426}
                 height={338}
-                className="h-auto w-full"
+                className="h-full w-full object-contain object-center"
               />
             </div>
           ))}
