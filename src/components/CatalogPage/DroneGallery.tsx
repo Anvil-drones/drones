@@ -21,7 +21,7 @@ export const DroneGallery = ({
           className="h-auto max-h-full w-auto max-w-full object-contain"
         />
       </div>
-      <div className="flex gap-2 overflow-x-auto pc:justify-center">
+      <div className="flex gap-2 overflow-x-auto">
         {images.map((image, index) => (
           <button
             key={image}
