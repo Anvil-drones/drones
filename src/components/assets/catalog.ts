@@ -900,23 +900,10 @@ export const dronesList: Drone[] = [
     slug: "taxi",
     type: "matka",
     images: [
-      "/images/catalog/taxi/1.PNG",
-      "/images/catalog/taxi/2.PNG",
-      "/images/catalog/taxi/3.PNG",
-      "/images/catalog/taxi/4.PNG",
-      "/images/catalog/taxi/5.PNG",
-      "/images/catalog/taxi/6.PNG",
-      "/images/catalog/taxi/7.PNG",
-      "/images/catalog/taxi/8.PNG",
-      "/images/catalog/taxi/9.PNG",
-      "/images/catalog/taxi/10.PNG",
       "/images/catalog/taxi/11.PNG",
       "/images/catalog/taxi/12.PNG",
       "/images/catalog/taxi/13.PNG",
       "/images/catalog/taxi/14.PNG",
-      "/images/catalog/taxi/15.PNG",
-      "/images/catalog/taxi/16.PNG",
-      "/images/catalog/taxi/17.PNG",
     ],
 
     uk: {
@@ -1050,7 +1037,7 @@ export const dronesList: Drone[] = [
       title: "БПЛА “TAXI” S",
       subtitle: "На старлінк зв’язку у виконані завдання бомбер-логіст",
       additionalInfo:
-        "Може використовуватись як Дрон-матка носій 10-дюмових дронів камікадзе, дрон-логіст для доставки провізії за рахунок скиду та стабілізації, також можливе використання у якості бомбера ворожих позицій",
+        "Багатофункціональна безпілотна платформа зі зв'язком через Starlink, призначена для виконання логістичних завдань та використання в ролі бомбера",
       features: [
         {
           label: "Максимальна дальність польоту",
@@ -1117,7 +1104,7 @@ export const dronesList: Drone[] = [
       subtitle:
         "A logistics bomber designed to perform missions using Starlink connectivity",
       additionalInfo:
-        "Can be used as a mothership drone carrying 10-inch kamikaze drones, a logistics drone for delivering supplies via payload drop, or a bomber for striking enemy positions",
+        "A multifunctional unmanned platform with Starlink connectivity, designed to perform logistics tasks and operate as a bomber drone",
       features: [
         {
           label: "Maximum flight range",
@@ -1187,7 +1174,7 @@ export const dronesList: Drone[] = [
       title: "БПЛА “TAXI” SR",
       subtitle: "На старлінк зв’язку у виконані завдання бомбер-логіст",
       additionalInfo:
-        "Може використовуватись як Дрон-матка носій 10-дюмових дронів камікадзе, дрон-логіст для доставки провізії за рахунок скиду та стабілізації, також можливе використання у якості бомбера ворожих позицій",
+        "Безпілотна платформа зі зв'язком через Starlink, призначена для виконання функцій ретранслятора та забезпечення передачі сигналу",
       features: [
         {
           label: "Максимальна дальність польоту",
@@ -1249,7 +1236,7 @@ export const dronesList: Drone[] = [
       subtitle:
         "A logistics bomber designed to perform missions using Starlink connectivity",
       additionalInfo:
-        "Can be used as a mothership drone carrying 10-inch kamikaze drones, a logistics drone for delivering supplies via payload drop, or a bomber for striking enemy positions",
+        "An unmanned platform with Starlink connectivity, designed to function as a communications relay and provide signal transmission",
       features: [
         {
           label: "Maximum flight range",
